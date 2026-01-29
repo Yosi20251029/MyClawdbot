@@ -2,7 +2,6 @@ name: Taipei Weather Notify
 
 on:
   schedule:
-    # every minute for initial test; will update to every 30 minutes after 10 runs
     - cron: '*/1 * * * *'
   workflow_dispatch: {}
 
@@ -10,30 +9,46 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch Taipei weather and send Telegram message
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq curl
+
+      - name: Fetch and send via Python
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          set -e
-          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
-            echo "Error: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set in secrets"
-            exit 1
-          fi
-          echo "Fetching weather..."
-          resp=$(curl -s 'https://api.open-meteo.com/v1/forecast?latitude=25.0330&longitude=121.5654&hourly=temperature_2m,precipitation_probability,windspeed_10m&current_weather=true&timezone=Asia/Taipei&forecast_days=1')
-          now=$(echo "$resp" | jq -r '.current_weather.time')
-          temp=$(echo "$resp" | jq -r '.current_weather.temperature')
-          wind=$(echo "$resp" | jq -r '.current_weather.windspeed')
-          msg="現在天氣：\n- 時間：${now}\n- 溫度：${temp}°C\n- 風速：約 ${wind} km/h\n\n未來 12 小時重點：\n"
-          # build next 12 hours
-          for i in $(seq 0 11); do
-            t=$(echo "$resp" | jq -r ".hourly.time[$i]")
-            te=$(echo "$resp" | jq -r ".hourly.temperature_2m[$i]")
-            pr=$(echo "$resp" | jq -r ".hourly.precipitation_probability[$i]")
-            wi=$(echo "$resp" | jq -r ".hourly.windspeed_10m[$i]")
-            msg+="- ${t} — ${te}°C，降雨機率 ${pr}% ，風速 ${wi} km/h\n"
-          done
-          msg+="\n（資料來源：Open-Meteo）"
-          echo "Sending message to Telegram..."
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" -d chat_id="${TELEGRAM_CHAT_ID}" -d text="$msg" | jq -r '."
+          python3 - << 'PY'
+          import os, requests, json
+          token = os.environ.get('TELEGRAM_BOT_TOKEN')
+          chat = os.environ.get('TELEGRAM_CHAT_ID')
+          if not token or not chat:
+              raise SystemExit('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID')
+          url = 'https://api.open-meteo.com/v1/forecast'
+          params = {'latitude':25.0330,'longitude':121.5654,'hourly':'temperature_2m,precipitation_probability,windspeed_10m','current_weather':'true','timezone':'Asia/Taipei','forecast_days':1}
+          r = requests.get(url, params=params, timeout=20)
+          r.raise_for_status()
+          data = r.json()
+          cur = data.get('current_weather',{})
+          now = cur.get('time')
+          temp = cur.get('temperature')
+          wind = cur.get('windspeed')
+          lines = []
+          lines.append(f"現在天氣：\n- 時間：{now}\n- 溫度：{temp}°C\n- 風速：約 {wind} km/h\n\n未來 12 小時重點：\n")
+          hourly = data.get('hourly',{})
+          times = hourly.get('time',[])
+          temps = hourly.get('temperature_2m',[])
+          prec = hourly.get('precipitation_probability',[])
+          winds = hourly.get('windspeed_10m',[])
+          for i in range(0, min(12, len(times))):
+              t = times[i]
+              te = temps[i]
+              pr = prec[i]
+              wi = winds[i]
+              lines.append(f"- {t} — {round(te,1)}°C，降雨機率 {pr}% ，風速 {wi} km/h")
+          lines.append('\n（資料來源：Open-Meteo）')
+          msg = '\n'.join(lines)
+          send_url = f'https://api.telegram.org/bot{token}/sendMessage'
+          res = requests.post(send_url, data={'chat_id': chat, 'text': msg})
+          res.raise_for_status()
+          print('sent')
+          PY
