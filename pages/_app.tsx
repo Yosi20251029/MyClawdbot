@@ -35,6 +35,9 @@ export default function App({ Component, pageProps }: AppProps) {
     }catch{}
   },[])
 
+  const [mounted, setMounted] = useState(false)
+  useEffect(()=> setMounted(true), [])
+
   return (
     <div className="min-h-screen">
       <div className="fixed top-4 right-4 z-50">
@@ -45,7 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
             setTheme(next)
           }}
           className="px-3 py-2 rounded bg-gray-200 dark:bg-gray-800 text-sm">
-          {theme==='dark' ? '亮模式' : '暗模式'}
+          {mounted ? (theme==='dark' ? '亮模式' : '暗模式') : '...'}
         </button>
       </div>
       <Component {...pageProps} />
