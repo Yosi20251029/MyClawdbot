@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Default (light) */
 :root {
   --bg: #f9fafb; /* gray-50 */
   --card: #ffffff;
@@ -9,6 +10,17 @@
   --muted: #6b7280; /* gray-500 */
 }
 
+/* Follow system preference if user hasn't chosen explicitly */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --card: #0f1724;
+    --text: #e6eef8;
+    --muted: #9ca3af;
+  }
+}
+
+/* Manual override via .dark class on html (higher specificity) */
 .dark {
   --bg: #0b1220; /* dark background */
   --card: #0f1724;
@@ -19,6 +31,7 @@
 body {
   background-color: var(--bg);
   color: var(--text);
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 .card {
