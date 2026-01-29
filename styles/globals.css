@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f9fafb; /* gray-50 */
+  --card: #ffffff;
+  --text: #111827; /* gray-900 */
+  --muted: #6b7280; /* gray-500 */
+}
+
+.dark {
+  --bg: #0b1220; /* dark background */
+  --card: #0f1724;
+  --text: #e6eef8;
+  --muted: #9ca3af;
+}
+
 body {
-  @apply bg-gray-50 text-gray-900;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  background-color: var(--card);
+  color: var(--text);
+}
+
+.muted {
+  color: var(--muted);
 }
