@@ -121,7 +121,12 @@ def send_telegram(text):
         logger.error('TG_BOT_TOKEN not set')
         raise SystemExit('TG_BOT_TOKEN not set')
     url = f'https://api.telegram.org/bot{token}/sendMessage'
-    payload = {'chat_id': CHAT_ID, 'text': text}
+    payload = {
+        'chat_id': CHAT_ID,
+        'text': text,
+        'parse_mode': 'HTML',
+        'disable_web_page_preview': True,
+    }
     try:
         r = session.post(url, data=payload, timeout=TIMEOUT)
         r.raise_for_status()
