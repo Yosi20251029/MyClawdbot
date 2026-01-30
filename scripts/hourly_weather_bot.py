@@ -12,6 +12,11 @@ RETRIES = int(os.environ.get('WEATHER_RETRIES', '3'))
 BACKOFF_FACTOR = float(os.environ.get('WEATHER_BACKOFF', '1.0'))
 LOG_PATH = os.environ.get('WEATHER_LOG', '/tmp/weather_bot.log')
 
+# Test mode controls
+TEST_MODE = os.environ.get('TEST_MODE','0') == '1'
+TEST_INTERVAL = int(os.environ.get('TEST_INTERVAL', '60'))
+TEST_COUNT = int(os.environ.get('TEST_COUNT', '10'))
+
 # Setup logging
 logging.basicConfig(level=logging.INFO, filename=LOG_PATH, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger('weatherbot')
@@ -43,7 +48,28 @@ def fetch_weather():
         raise
 
 
-def format_message(data):
+def fetch_news():
+    # Fetch top news about 太子集團 via Google News RSS
+    rss_url = 'https://news.google.com/rss/search?q=%E5%A4%AA%E5%AD%90%E9%9B%86%E5%9C%98&hl=zh-TW&gl=TW&ceid=TW:zh-Hant'
+    try:
+        r = session.get(rss_url, timeout=TIMEOUT)
+        r.raise_for_status()
+        # parse basic XML titles
+        import xml.etree.ElementTree as ET
+        root = ET.fromstring(r.content)
+        items = root.findall('.//item')[:5]
+        news = []
+        for it in items:
+            title = it.find('title').text if it.find('title') is not None else ''
+            link = it.find('link').text if it.find('link') is not None else ''
+            news.append({'title': title, 'link': link})
+        return news
+    except Exception as e:
+        logger.warning(f'fetch_news failed: {e}')
+        return []
+
+
+def format_message(data, news_items):
     cur = data.get('current_weather',{})
     time_str = cur.get('time','')
     temp = cur.get('temperature')
@@ -61,74 +87,18 @@ def format_message(data):
         else: wind = round(wind,1)
         wind_text = f"約 {wind} {WIND_UNIT}"
     cur_line = f"現在天氣：\n- 時間：{time_str}\n- 溫度：{temp_text}\n- 風速：{wind_text}\n"
-    # next 12 hours — pick the first hourly time strictly after now in Asia/Taipei
-    from datetime import datetime, timezone
-    import pytz
 
-    hourly = data.get('hourly',{})
-    times = hourly.get('time',[])
-    temps = hourly.get('temperature_2m',[])
-    prec = hourly.get('precipitation_probability',[])
-    winds = hourly.get('windspeed_10m',[])
-    msg = cur_line + "\n未來 12 小時重點：\n"
+    msg = cur_line + "\n最新五則太子集團新聞重點：\n"
+    if not news_items:
+        msg += "（取得新聞失敗或無相關新聞）\n"
+    else:
+        for i,n in enumerate(news_items, start=1):
+            # truncate lengthy titles
+            title = (n.get('title') or '')
+            link = n.get('link') or ''
+            msg += f"{i}. {title}\n   {link}\n"
 
-    tz = pytz.timezone('Asia/Taipei')
-    now_local = datetime.now(tz)
-
-    # parse times into datetimes with timezone awareness
-    time_objs = []
-    for t in times:
-        try:
-            # fromisoformat works with offsets like +08:00; ensure UTC fallback
-            dt = datetime.fromisoformat(t)
-            if dt.tzinfo is None:
-                # API should include timezone, but assume UTC if not
-                dt = dt.replace(tzinfo=timezone.utc)
-            # convert to local tz
-            dt_local = dt.astimezone(tz)
-            time_objs.append(dt_local)
-        except Exception:
-            time_objs.append(None)
-
-    # find first index with time > now_local
-    start_idx = None
-    for i, dt in enumerate(time_objs):
-        if dt is None:
-            continue
-        if dt > now_local:
-            start_idx = i
-            break
-    if start_idx is None:
-        # fallback: if no future times, start from end-12
-        start_idx = max(0, len(times) - 12)
-
-    for i in range(start_idx, min(len(times), start_idx + 12)):
-        t = times[i]
-        te = temps[i] if i < len(temps) else None
-        pr = prec[i] if i < len(prec) else None
-        wi = winds[i] if i < len(winds) else None
-        if te is None:
-            te_text = 'N/A'
-        else:
-            if TEMP_UNIT=='F': te = te*9/5+32
-            te_text = f"{round(te,1)}°{TEMP_UNIT}"
-        if pr is None:
-            pr_text = 'N/A'
-        else:
-            pr_text = f"{pr}%"
-        if wi is None:
-            wi_text = 'N/A'
-        else:
-            if WIND_UNIT=='m/s': wi = round(wi/3.6,1)
-            else: wi = round(wi,1)
-            wi_text = f"{wi} {WIND_UNIT}"
-        # format time for readability in local tz
-        try:
-            display_time = time_objs[i].strftime('%Y-%m-%d %H:%M') if time_objs[i] else t
-        except Exception:
-            display_time = t
-        msg += f"- {display_time} — {te_text}，降雨機率 {pr_text}，風速 {wi_text}\n"
-    msg += "\n（資料來源：Open-Meteo）"
+    msg += "\n（資料來源：Open-Meteo / Google News RSS）"
     return msg
 
 
@@ -148,16 +118,36 @@ def send_telegram(text):
         logger.warning(f'send_telegram failed: {e}')
         raise
 
+
+def run_once():
+    data = fetch_weather()
+    news = fetch_news()
+    msg = format_message(data, news)
+    resp = send_telegram(msg)
+    return resp
+
 if __name__=='__main__':
     logger.info('weather bot started')
+    if TEST_MODE:
+        logger.info(f'Running in TEST_MODE: interval={TEST_INTERVAL}s count={TEST_COUNT}')
+        for i in range(TEST_COUNT):
+            try:
+                run_once()
+                logger.info(f'Test send {i+1}/{TEST_COUNT} done')
+            except Exception as e:
+                logger.error(f'Error during test send: {e}')
+            if i < TEST_COUNT-1:
+                time.sleep(TEST_INTERVAL)
+        logger.info('TEST_MODE completed')
+        # after test mode, exit (we expect external scheduler for hourly runs)
+        raise SystemExit('TEST_MODE finished')
+
+    # Normal mode: send once per hour
     while True:
         try:
-            data = fetch_weather()
-            msg = format_message(data)
-            send_telegram(msg)
+            run_once()
         except Exception as e:
             logger.error(f'Error during weather fetch/send: {e}')
-            # send minimal error notice (don't raise if sending fails)
             try:
                 session.post(f'https://api.telegram.org/bot{TOKEN}/sendMessage', data={'chat_id': CHAT_ID, 'text': f'天氣機器人發生錯誤：{e}'}, timeout=10)
             except Exception:
