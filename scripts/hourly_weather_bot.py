@@ -88,15 +88,28 @@ def format_message(data, news_items):
         wind_text = f"約 {wind} {WIND_UNIT}"
     cur_line = f"現在天氣：\n- 時間：{time_str}\n- 溫度：{temp_text}\n- 風速：{wind_text}\n"
 
+    # Build clickable links using HTML and a concise summary
     msg = cur_line + "\n最新五則太子集團新聞重點：\n"
     if not news_items:
         msg += "（取得新聞失敗或無相關新聞）\n"
     else:
+        titles_for_summary = []
         for i,n in enumerate(news_items, start=1):
-            # truncate lengthy titles
-            title = (n.get('title') or '')
+            title = (n.get('title') or '').strip()
             link = n.get('link') or ''
-            msg += f"{i}. {title}\n   {link}\n"
+            # escape HTML characters in title
+            import html
+            safe_title = html.escape(title)
+            safe_link = html.escape(link)
+            msg += f"{i}. <a href=\"{safe_link}\">{safe_title}</a>\n"
+            # prepare short title for summary
+            short = title
+            if len(short) > 80:
+                short = short[:77] + '...'
+            titles_for_summary.append(short)
+        # concise summary line joining main topics
+        summary = ' / '.join(titles_for_summary)
+        msg += f"\n重點整理：{html.escape(summary)}\n"
 
     msg += "\n（資料來源：Open-Meteo / Google News RSS）"
     return msg
