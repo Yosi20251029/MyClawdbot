@@ -18,10 +18,24 @@ jobs:
           sudo apt-get install -y jq curl python3-pip
           pip3 install requests
 
+      - name: Download previous TOEIC history artifact (if exists)
+        uses: actions/download-artifact@v4
+        with:
+          name: toeic-history
+          path: ./memory || true
+
       - name: Run report (send)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: |
           pip3 install lunardate
           python3 scripts/hourly_report.py --send
+
+      - name: Upload TOEIC history artifact
+        if: success() || failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: toeic-history
+          path: memory/toeic_history.json

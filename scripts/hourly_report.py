@@ -20,6 +20,51 @@ TG_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 TG_CHAT = os.environ.get('TELEGRAM_CHAT_ID','533375854')
 
 # helpers
+def fetch_openweathermap(api_key, retries=2, timeout=30):
+    # Call OpenWeatherMap Current + OneCall API (OneCall requires lat/lon)
+    ow_url = 'https://api.openweathermap.org/data/2.5/onecall'
+    params = {'lat':25.0330, 'lon':121.5654, 'units':'metric', 'exclude':'minutely', 'appid': api_key}
+    last_exc = None
+    for attempt in range(1, retries+1):
+        try:
+            r = requests.get(ow_url, params=params, timeout=timeout)
+            r.raise_for_status()
+            data = r.json()
+            # normalize to our expected shape
+            cur = data.get('current', {})
+            daily = data.get('daily', [])
+            hourly = data.get('hourly', [])
+            out = {}
+            out['current_weather'] = {
+                'time': datetime.fromtimestamp(cur.get('dt', 0)).isoformat(),
+                'temperature': cur.get('temp'),
+                'windspeed': cur.get('wind_speed')
+            }
+            if daily:
+                out['daily'] = {
+                    'temperature_2m_max': [d.get('temp',{}).get('max') for d in daily][:1],
+                    'temperature_2m_min': [d.get('temp',{}).get('min') for d in daily][:1],
+                    'precipitation_sum': [ (d.get('rain',0) + d.get('snow',0)) for d in daily][:1]
+                }
+            else:
+                out['daily'] = {'temperature_2m_max':[None], 'temperature_2m_min':[None], 'precipitation_sum':[0]}
+            # hourly precipitation probability not provided by OWM; use pop if present
+            pop_list = [int(h.get('pop',0)*100) for h in hourly]
+            out['hourly'] = {'precipitation_probability': pop_list}
+            out['_source'] = 'openweathermap'
+            return out
+        except Exception as e:
+            last_exc = e
+            wait = 3 * attempt
+            print(f'fetch_openweathermap: attempt {attempt} failed: {e}; retrying in {wait}s', file=sys.stderr)
+            try:
+                import time
+                time.sleep(wait)
+            except Exception:
+                pass
+    raise last_exc
+
+
 def fetch_weather(retries=3, timeout=60):
     url = 'https://api.open-meteo.com/v1/forecast'
     params = {'latitude':25.0330,'longitude':121.5654,'current_weather':'true','timezone':'Asia/Taipei','daily':'temperature_2m_max,temperature_2m_min,precipitation_sum','hourly':'precipitation_probability'}
@@ -28,7 +73,9 @@ def fetch_weather(retries=3, timeout=60):
         try:
             r = requests.get(url, params=params, timeout=timeout)
             r.raise_for_status()
-            return r.json()
+            data = r.json()
+            data['_source'] = 'open-meteo'
+            return data
         except Exception as e:
             last_exc = e
             wait = 5 * attempt
@@ -38,7 +85,15 @@ def fetch_weather(retries=3, timeout=60):
                 time.sleep(wait)
             except Exception:
                 pass
-    # all retries failed
+    # all retries failed for open-meteo — try OpenWeatherMap if key available
+    owm_key = os.environ.get('OPENWEATHER_API_KEY')
+    if owm_key:
+        try:
+            print('fetch_weather: primary API failed, attempting OpenWeatherMap fallback', file=sys.stderr)
+            return fetch_openweathermap(owm_key)
+        except Exception as e:
+            print(f'fetch_weather: OpenWeatherMap fallback failed: {e}', file=sys.stderr)
+    # if no fallback or fallback failed, raise original
     raise last_exc
 
 def fetch_news(query, max_items=5):
