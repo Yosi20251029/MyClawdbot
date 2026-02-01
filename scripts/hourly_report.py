@@ -184,6 +184,13 @@ news_world = fetch_news('international OR world news')
 # compose
 lines = []
 lines.append(f"<b>時間：</b>{now_time}")
+# weather source annotation
+weather_source = weather.get('_source','open-meteo')
+if weather_source == 'openweathermap':
+    src_label = 'OpenWeatherMap（備援）'
+else:
+    src_label = 'Open‑Meteo（主來源）'
+lines.append(f"<b>資料來源：</b> {src_label}")
 lines.append(f"<b>現在天氣：</b> 溫度 {now_temp}°C，風速 約{now_wind} km/h")
 if precip_prob is not None:
     lines.append(f"<b>明天天氣概況：</b> {weather_summary}（降雨機率最高 {precip_prob}%）")
