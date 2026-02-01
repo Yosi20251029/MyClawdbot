@@ -55,9 +55,14 @@ def clothing_advice(max_t, min_t, precip):
     return '，'.join(adv)
 
 def lunar_placeholder():
-    # simple placeholder; for accurate lunar use a library or API
-    today = datetime.now()
-    return f'農曆：暫無（請在部署時安裝 lunardate 以獲取精確資訊）'
+    try:
+        from lunardate import LunarDate
+        today = datetime.now()
+        ld = LunarDate.fromSolarDate(today.year, today.month, today.day)
+        return f'農曆：{ld.year}年{ld.month}月{ld.day}日'
+    except Exception:
+        today = datetime.now()
+        return f'農曆：暫無（lunardate not available） - {today.strftime("%Y-%m-%d")}'
 
 def horoscope_template(sign):
     # deterministic simple horoscope based on date
