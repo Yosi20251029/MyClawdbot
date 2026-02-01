@@ -136,8 +136,8 @@ else:
     lines.append(f"<b>明天天氣概況：</b> {weather_summary}")
 lines.append(f"<b>明天天氣與穿衣建議：</b> 最高 {max_t}°C / 最低 {min_t}°C；建議：{clothing_advice(max_t, min_t, precip)}")
 # Replace lunar section with TOEIC vocabulary practice
-def sample_toeic_words(n=5):
-    import random
+def sample_toeic_words(n=5, history_k=10):
+    import random, json
     words = [
         {'word':'acquire','chi':'獲得；取得','example':'The company plans to acquire new assets next quarter.'},
         {'word':'allocate','chi':'分配；撥出','example':'We need to allocate more funds to marketing.'},
@@ -155,7 +155,34 @@ def sample_toeic_words(n=5):
         {'word':'schedule','chi':'時間表；安排','example':'The meeting is scheduled for Friday.'},
         {'word':'strategic','chi':'策略性的','example':'They developed a strategic plan for expansion.'}
     ]
-    return random.sample(words, min(n, len(words)))
+    history_path = os.path.join('memory','toeic_history.json')
+    recent = []
+    try:
+        if os.path.exists(history_path):
+            with open(history_path,'r',encoding='utf-8') as f:
+                recent = json.load(f)
+    except Exception:
+        recent = []
+    # build pool excluding recent words
+    recent_set = set(recent[-history_k:]) if recent else set()
+    pool = [w for w in words if w['word'] not in recent_set]
+    if len(pool) < n:
+        # not enough unique words, reset recent
+        pool = words.copy()
+        recent = []
+    chosen = random.sample(pool, min(n, len(pool)))
+    # update history
+    recent_words = [w['word'] for w in chosen]
+    recent.extend(recent_words)
+    # keep only last history_k entries
+    recent = recent[-history_k:]
+    try:
+        os.makedirs('memory', exist_ok=True)
+        with open(history_path,'w',encoding='utf-8') as f:
+            json.dump(recent, f, ensure_ascii=False)
+    except Exception:
+        pass
+    return chosen
 
 toeic = sample_toeic_words(5)
 
