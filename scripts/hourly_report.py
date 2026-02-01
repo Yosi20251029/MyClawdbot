@@ -20,12 +20,26 @@ TG_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 TG_CHAT = os.environ.get('TELEGRAM_CHAT_ID','533375854')
 
 # helpers
-def fetch_weather():
+def fetch_weather(retries=3, timeout=60):
     url = 'https://api.open-meteo.com/v1/forecast'
-    params = {'latitude':25.0330,'longitude':121.5654,'current_weather':'true','timezone':'Asia/Taipei','daily':'temperature_2m_max,temperature_2m_min,precipitation_sum'}
-    r = requests.get(url, params=params, timeout=20)
-    r.raise_for_status()
-    return r.json()
+    params = {'latitude':25.0330,'longitude':121.5654,'current_weather':'true','timezone':'Asia/Taipei','daily':'temperature_2m_max,temperature_2m_min,precipitation_sum','hourly':'precipitation_probability'}
+    last_exc = None
+    for attempt in range(1, retries+1):
+        try:
+            r = requests.get(url, params=params, timeout=timeout)
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:
+            last_exc = e
+            wait = 5 * attempt
+            print(f'fetch_weather: attempt {attempt} failed: {e}; retrying in {wait}s', file=sys.stderr)
+            try:
+                import time
+                time.sleep(wait)
+            except Exception:
+                pass
+    # all retries failed
+    raise last_exc
 
 def fetch_news(query, max_items=5):
     rss_url = f'https://news.google.com/rss/search?q={requests.utils.requote_uri(query)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant'
