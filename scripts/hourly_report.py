@@ -84,6 +84,29 @@ max_t = daily.get('temperature_2m_max',[None])[0]
 min_t = daily.get('temperature_2m_min',[None])[0]
 precip = daily.get('precipitation_sum',[0])[0]
 
+# determine tomorrow weather summary and precipitation probability
+weather_summary = '未知'
+precip_prob = None
+try:
+    # use daily precipitation_sum to decide rain vs clear
+    if precip is not None and precip > 0.1:
+        weather_summary = '雨天'
+    else:
+        # check hourly precipitation_probability for tomorrow (if available)
+        hourly = weather.get('hourly',{})
+        probs = hourly.get('precipitation_probability', [])
+        if probs:
+            maxp = max(probs)
+            precip_prob = maxp
+            if maxp >= 60:
+                weather_summary = '大雨機率高'
+            elif maxp >= 30:
+                weather_summary = '有雨機率'
+            else:
+                weather_summary = '晴到多雲'
+except Exception:
+    weather_summary = '未知'
+
 # news
 news_taizi = fetch_news('太子集團')
 news_taiwan = fetch_news('台灣')
@@ -93,6 +116,10 @@ news_world = fetch_news('international OR world news')
 lines = []
 lines.append(f"<b>時間：</b>{now_time}")
 lines.append(f"<b>現在天氣：</b> 溫度 {now_temp}°C，風速 約{now_wind} km/h")
+if precip_prob is not None:
+    lines.append(f"<b>明天天氣概況：</b> {weather_summary}（降雨機率最高 {precip_prob}%）")
+else:
+    lines.append(f"<b>明天天氣概況：</b> {weather_summary}")
 lines.append(f"<b>明天天氣與穿衣建議：</b> 最高 {max_t}°C / 最低 {min_t}°C；建議：{clothing_advice(max_t, min_t, precip)}")
 lines.append(f"<b>農民曆：</b> {lunar_placeholder()}")
 lines.append(f"<b>今日運勢：</b> 金牛：{horoscope_template('Taurus')}  巨蟹：{horoscope_template('Cancer')}")
@@ -103,11 +130,10 @@ def format_news_section(title, items):
         s.append('無資料')
     else:
         for i,it in enumerate(items, start=1):
-            # use HTML link
             import html
             t = html.escape(it['title'])
-            l = html.escape(it['link'])
-            s.append(f"{i}. <a href=\"{l}\">{t}</a>")
+            # only title, no link as requested
+            s.append(f"{i}. {t}")
         # concise summary
         summary = ' / '.join([ (it['title'][:80] + '...') if len(it['title'])>80 else it['title'] for it in items ])
         s.append(f"重點整理：{html.escape(summary)}")
