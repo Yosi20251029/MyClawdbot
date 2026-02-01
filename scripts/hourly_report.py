@@ -163,10 +163,9 @@ def format_news_section(title, items):
         import re, html
         def clean_title(raw):
             t = raw.strip()
-            # split on common separators and take the leftmost part to remove source suffixes
-            for sep in [' - ', ' | ', ' — ', '–']:
-                if sep in t:
-                    t = t.split(sep)[0]
+            # split on common separators (dash, em-dash, pipe) regardless of spaces
+            parts = re.split(r"\s*[-–—|]\s*", t)
+            t = parts[0]
             # also remove any trailing parentheses content
             t = re.sub(r"\s*\（.*\）\s*$", "", t)
             return t
