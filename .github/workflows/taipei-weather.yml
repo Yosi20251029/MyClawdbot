@@ -20,9 +20,10 @@ jobs:
 
       - name: Download previous TOEIC history artifact (if exists)
         uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
           name: toeic-history
-          path: ./memory || true
+          path: memory
 
       - name: Run report (send)
         env:
