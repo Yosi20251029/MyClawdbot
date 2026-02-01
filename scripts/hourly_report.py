@@ -129,13 +129,20 @@ def format_news_section(title, items):
     if not items:
         s.append('無資料')
     else:
+        import re, html
+        def clean_title(raw):
+            t = raw.strip()
+            # remove trailing source markers like ' - Yahoo新聞' or ' | 華視新聞'
+            t = re.sub(r"\s+[-\|].*$", "", t)
+            return t
         for i,it in enumerate(items, start=1):
-            import html
-            t = html.escape(it['title'])
-            # only title, no link as requested
-            s.append(f"{i}. {t}")
-        # concise summary
-        summary = ' / '.join([ (it['title'][:80] + '...') if len(it['title'])>80 else it['title'] for it in items ])
+            raw = it.get('title','')
+            link = it.get('link','')
+            text = html.escape(clean_title(raw))
+            href = html.escape(link)
+            s.append(f"{i}. <a href=\"{href}\">{text}</a>")
+        # concise summary (cleaned)
+        summary = ' / '.join([ (clean_title(it['title'])[:80] + '...') if len(clean_title(it['title']))>80 else clean_title(it['title']) for it in items ])
         s.append(f"重點整理：{html.escape(summary)}")
     return '\n'.join(s)
 
