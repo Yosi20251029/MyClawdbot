@@ -121,7 +121,38 @@ if precip_prob is not None:
 else:
     lines.append(f"<b>明天天氣概況：</b> {weather_summary}")
 lines.append(f"<b>明天天氣與穿衣建議：</b> 最高 {max_t}°C / 最低 {min_t}°C；建議：{clothing_advice(max_t, min_t, precip)}")
-lines.append(f"<b>農民曆：</b> {lunar_placeholder()}")
+# Replace lunar section with TOEIC vocabulary practice
+def sample_toeic_words(n=5):
+    import random
+    words = [
+        {'word':'acquire','chi':'獲得；取得','example':'The company plans to acquire new assets next quarter.'},
+        {'word':'allocate','chi':'分配；撥出','example':'We need to allocate more funds to marketing.'},
+        {'word':'annual','chi':'每年的；年度的','example':'The annual report will be released in March.'},
+        {'word':'benefit','chi':'利益；好處','example':'Employees receive health benefits.'},
+        {'word':'comply','chi':'遵守','example':'All contractors must comply with the safety regulations.'},
+        {'word':'contribute','chi':'貢獻；捐助','example':'She contributed significantly to the project.'},
+        {'word':'deliver','chi':'交付；傳遞','example':'The courier will deliver the package by noon.'},
+        {'word':'efficient','chi':'有效率的','example':'An efficient workflow saves time.'},
+        {'word':'estimate','chi':'估計；估算','example':'Please provide an estimate for the repair costs.'},
+        {'word':'negotiate','chi':'談判；協商','example':'They will negotiate the contract terms next week.'},
+        {'word':'priority','chi':'優先事項；優先權','example':'Customer satisfaction is our top priority.'},
+        {'word':'proposal','chi':'提案；建議','example':'Submit your proposal by the end of the month.'},
+        {'word':'revenue','chi':'收入；營收','example':'The company reported increased revenue this quarter.'},
+        {'word':'schedule','chi':'時間表；安排','example':'The meeting is scheduled for Friday.'},
+        {'word':'strategic','chi':'策略性的','example':'They developed a strategic plan for expansion.'}
+    ]
+    return random.sample(words, min(n, len(words)))
+
+toeic = sample_toeic_words(5)
+
+lines.append(f"<b>多益常考單字（5）</b>")
+for w in toeic:
+    import html
+    word = html.escape(w['word'])
+    chi = html.escape(w['chi'])
+    ex = html.escape(w['example'])
+    lines.append(f"- {word}：{chi}；例句：{ex}")
+
 lines.append(f"<b>今日運勢：</b> 金牛：{horoscope_template('Taurus')}  巨蟹：{horoscope_template('Cancer')}")
 
 def format_news_section(title, items):
