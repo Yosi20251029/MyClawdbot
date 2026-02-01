@@ -34,6 +34,18 @@ jobs:
           pip3 install lunardate
           python3 scripts/hourly_report.py --send
 
+      - name: Prepare TOEIC history for upload
+        run: |
+          mkdir -p memory
+          if [ ! -f memory/toeic_history.json ]; then
+            echo '[]' > memory/toeic_history.json
+            echo "toeic_history.json created (empty)"
+          else
+            echo "toeic_history.json exists:"
+            ls -l memory/toeic_history.json
+            echo "content:" && cat memory/toeic_history.json
+          fi
+
       - name: Upload TOEIC history artifact
         if: success() || failure()
         uses: actions/upload-artifact@v4
