@@ -292,6 +292,28 @@ lines.append(format_news_section('國際新聞重點', news_world))
 
 message = '\n\n'.join(lines)
 
+# build summary for logs
+def build_summary(data):
+    return {
+        'weather_time': data.get('current_weather',{}).get('time'),
+        'weather_source': data.get('_source','open-meteo'),
+        'precip_prob': precip_prob,
+        'news_counts': {
+            'taizi': len(news_taizi),
+            'taiwan': len(news_taiwan),
+            'world': len(news_world)
+        },
+        'toeic': [ w['word'] for w in toeic ]
+    }
+
+summary = build_summary(weather)
+import json
+summary_json = json.dumps(summary, ensure_ascii=False)
+# print summary to stdout for easy inspection in Actions logs
+print('\n--- SUMMARY ---')
+print(summary_json)
+print('--- END SUMMARY ---\n')
+
 if args.dry_run:
     print('--- DRY RUN: hourly report ---')
     print(message)
