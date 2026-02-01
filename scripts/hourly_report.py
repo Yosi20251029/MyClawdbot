@@ -191,6 +191,9 @@ if weather_source == 'openweathermap':
 else:
     src_label = 'Open‑Meteo（主來源）'
 lines.append(f"<b>資料來源：</b> {src_label}")
+# if using backup source, add caution note
+if weather_source == 'openweathermap':
+    lines.append('<b>備註：</b> 本次資料為備援來源（OpenWeatherMap），數值可能與主來源略有差異，請以當地實際狀況為準。')
 lines.append(f"<b>現在天氣：</b> 溫度 {now_temp}°C，風速 約{now_wind} km/h")
 if precip_prob is not None:
     lines.append(f"<b>明天天氣概況：</b> {weather_summary}（降雨機率最高 {precip_prob}%）")
