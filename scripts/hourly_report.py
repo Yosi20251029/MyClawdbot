@@ -163,8 +163,12 @@ def format_news_section(title, items):
         import re, html
         def clean_title(raw):
             t = raw.strip()
-            # remove trailing source markers like ' - Yahoo新聞' or ' | 華視新聞'
-            t = re.sub(r"\s+[-\|].*$", "", t)
+            # split on common separators and take the leftmost part to remove source suffixes
+            for sep in [' - ', ' | ', ' — ', '–']:
+                if sep in t:
+                    t = t.split(sep)[0]
+            # also remove any trailing parentheses content
+            t = re.sub(r"\s*\（.*\）\s*$", "", t)
             return t
         for i,it in enumerate(items, start=1):
             raw = it.get('title','')
