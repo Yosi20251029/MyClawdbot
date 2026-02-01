@@ -1,54 +1,18 @@
 name: Taipei Weather Notify
 
 on:
-  schedule:
-    - cron: '0 * * * *'
   workflow_dispatch: {}
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq curl
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y jq curl python3-pip && pip3 install requests
 
-      - name: Fetch and send via Python
+      - name: Run hourly report (dry-run by default)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python3 - << 'PY'
-          import os, requests, json
-          token = os.environ.get('TELEGRAM_BOT_TOKEN')
-          chat = os.environ.get('TELEGRAM_CHAT_ID')
-          if not token or not chat:
-              raise SystemExit('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID')
-          url = 'https://api.open-meteo.com/v1/forecast'
-          params = {'latitude':25.0330,'longitude':121.5654,'hourly':'temperature_2m,precipitation_probability,windspeed_10m','current_weather':'true','timezone':'Asia/Taipei','forecast_days':1}
-          r = requests.get(url, params=params, timeout=20)
-          r.raise_for_status()
-          data = r.json()
-          cur = data.get('current_weather',{})
-          now = cur.get('time')
-          temp = cur.get('temperature')
-          wind = cur.get('windspeed')
-          lines = []
-          lines.append(f"現在天氣：\n- 時間：{now}\n- 溫度：{temp}°C\n- 風速：約 {wind} km/h\n\n未來 12 小時重點：\n")
-          hourly = data.get('hourly',{})
-          times = hourly.get('time',[])
-          temps = hourly.get('temperature_2m',[])
-          prec = hourly.get('precipitation_probability',[])
-          winds = hourly.get('windspeed_10m',[])
-          for i in range(0, min(12, len(times))):
-              t = times[i]
-              te = temps[i]
-              pr = prec[i]
-              wi = winds[i]
-              lines.append(f"- {t} — {round(te,1)}°C，降雨機率 {pr}% ，風速 {wi} km/h")
-          lines.append('\n（資料來源：Open-Meteo）')
-          msg = '\n'.join(lines)
-          send_url = f'https://api.telegram.org/bot{token}/sendMessage'
-          res = requests.post(send_url, data={'chat_id': chat, 'text': msg})
-          res.raise_for_status()
-          print('sent')
-          PY
+          python3 scripts/hourly_report.py --dry-run
