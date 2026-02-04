@@ -1,0 +1,559 @@
+[
+  {
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "chi": "熱愛你的工作，是做出偉大事業的唯一方式。"
+  },
+  {
+    "quote": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "chi": "人生就是當你忙着制定其他計劃時發生的事。"
+  },
+  {
+    "quote": "The best way to predict the future is to invent it.",
+    "author": "Alan Kay",
+    "chi": "預測未來的最好方法就是去創造它。"
+  },
+  {
+    "quote": "Do not wait to strike till the iron is hot; but make it hot by striking.",
+    "author": "William Butler Yeats",
+    "chi": "不要等到鐵熱才揮擊，而應透過敲打把鐵燒熱。"
+  },
+  {
+    "quote": "Whether you think you can or you think you can’t, you’re right.",
+    "author": "Henry Ford",
+    "chi": "你認為你能或不能，你都對。"
+  },
+  {
+    "quote": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau",
+    "chi": "成功通常降臨在那些忙於行動而無暇尋找成功的人身上。"
+  },
+  {
+    "quote": "Don’t watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson",
+    "chi": "別盯著時鐘看；像時鐘一樣繼續運轉，持續前進。"
+  },
+  {
+    "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "chi": "永遠面向陽光——陰影會落在你身後。"
+  },
+  {
+    "quote": "You miss 100% of the shots you don’t take.",
+    "author": "Wayne Gretzky",
+    "chi": "你不出手的機會，錯過的百分之百。"
+  },
+  {
+    "quote": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "chi": "千里之行，始於足下。"
+  },
+  {
+    "quote": "Act as if what you do makes a difference. It does.",
+    "author": "William James",
+    "chi": "行動時要相信你的作為有意義，因為它確實如此。"
+  },
+  {
+    "quote": "Either you run the day, or the day runs you.",
+    "author": "Jim Rohn",
+    "chi": "要麼你掌控這一天，要麼這一天掌控你。"
+  },
+  {
+    "quote": "The future depends on what you do today.",
+    "author": "Mahatma Gandhi",
+    "chi": "未來取決於你今天所做的事。"
+  },
+  {
+    "quote": "Perseverance is not a long race; it is many short races one after another.",
+    "author": "Walter Elliot",
+    "chi": "毅力不是一場長跑，而是接連不斷的短跑。"
+  },
+  {
+    "quote": "Quality is not an act, it is a habit.",
+    "author": "Aristotle",
+    "chi": "品質不是一個行為，而是一種習慣。"
+  },
+  {
+    "quote": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain",
+    "chi": "要取得進展的秘訣就是開始行動。"
+  },
+  {
+    "quote": "You have to be a little bit crazy to do great things.",
+    "author": "Unknown",
+    "chi": "要成就偉大事業，你得有點瘋狂。"
+  },
+  {
+    "quote": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt",
+    "chi": "相信自己能，你就已完成了一半。"
+  },
+  {
+    "quote": "If opportunity doesn’t knock, build a door.",
+    "author": "Milton Berle",
+    "chi": "若機會不敲門，就自己造一扇門。"
+  },
+  {
+    "quote": "Don't be afraid to give up the good to go for the great.",
+    "author": "John D. Rockefeller",
+    "chi": "不要害怕放棄好的，去追求更好的。"
+  },
+  {
+    "quote": "The harder I work, the luckier I get.",
+    "author": "Samuel Goldwyn",
+    "chi": "我越努力，越幸運。"
+  },
+  {
+    "quote": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "chi": "不怕走得慢，只怕停下來。"
+  },
+  {
+    "quote": "Motivation is what gets you started. Habit is what keeps you going.",
+    "author": "Jim Ryun",
+    "chi": "動機讓你開始，習慣讓你持續。"
+  },
+  {
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt",
+    "chi": "實現明天的唯一限制是我們今天的懷疑。"
+  },
+  {
+    "quote": "If you can dream it, you can do it.",
+    "author": "Walt Disney",
+    "chi": "如果你能夢想它，你就能做到它。"
+  },
+  {
+    "quote": "Either write something worth reading or do something worth writing.",
+    "author": "Benjamin Franklin",
+    "chi": "要麼寫些值得閱讀的東西，要麼做些值得書寫的事。"
+  },
+  {
+    "quote": "What we fear of doing most is usually what we most need to do.",
+    "author": "Ralph Waldo Emerson",
+    "chi": "我們最害怕做的事通常是最需要去做的事。"
+  },
+  {
+    "quote": "The way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney",
+    "chi": "開始的方式是停止空談，開始行動。"
+  },
+  {
+    "quote": "A goal without a plan is just a wish.",
+    "author": "Antoine de Saint-Exupéry",
+    "chi": "沒有計劃的目標只不過是一個願望。"
+  },
+  {
+    "quote": "You don’t have to be great to start, but you have to start to be great.",
+    "author": "Zig Ziglar",
+    "chi": "開始時不必偉大，但要偉大就必須開始。"
+  },
+  {
+    "quote": "The most common way people give up their power is by thinking they don’t have any.",
+    "author": "Alice Walker",
+    "chi": "人們放棄自己力量的最常見方式就是認為自己沒有力量。"
+  },
+  {
+    "quote": "Start where you are. Use what you have. Do what you can.",
+    "author": "Arthur Ashe",
+    "chi": "從你所在之處開始，用你擁有的，做你能做的。"
+  },
+  {
+    "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "chi": "成功非終點，失敗非致命；重要的是繼續前進的勇氣。"
+  },
+  {
+    "quote": "Don't wait. The time will never be just right.",
+    "author": "Napoleon Hill",
+    "chi": "不要等待，時機永遠不會剛好。"
+  },
+  {
+    "quote": "If you want to lift yourself up, lift up someone else.",
+    "author": "Booker T. Washington",
+    "chi": "若想提升自己，就提升他人。"
+  },
+  {
+    "quote": "The best revenge is massive success.",
+    "author": "Frank Sinatra",
+    "chi": "最好的報復就是巨大的成功。"
+  },
+  {
+    "quote": "Small deeds done are better than great deeds planned.",
+    "author": "Peter Marshall",
+    "chi": "小事做到勝過宏大計劃未做。"
+  },
+  {
+    "quote": "Be not afraid of going slowly, be afraid only of standing still.",
+    "author": "Chinese Proverb",
+    "chi": "不要畏懼緩慢前行，只怕停滯不前。"
+  },
+  {
+    "quote": "Everything you’ve ever wanted is on the other side of fear.",
+    "author": "George Addair",
+    "chi": "你曾渴望的一切都在恐懼的另一側。"
+  },
+  {
+    "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "author": "C.S. Lewis",
+    "chi": "艱難常使平凡人成就非凡的命運。"
+  },
+  {
+    "quote": "Your time is limited, don’t waste it living someone else’s life.",
+    "author": "Steve Jobs",
+    "chi": "你的時間有限，別浪費在活別人的人生上。"
+  },
+  {
+    "quote": "Don’t wish it were easier. Wish you were better.",
+    "author": "Jim Rohn",
+    "chi": "別希望事情更簡單，應該希望自己更強大。"
+  },
+  {
+    "quote": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson",
+    "chi": "你註定要成為的人，是你自己決定成為的人。"
+  },
+  {
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "chi": "熱愛你的工作，是做出偉大事業的唯一方式。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "chi": "人生就是當你忙着制定其他計劃時發生的事。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The best way to predict the future is to invent it.",
+    "author": "Alan Kay",
+    "chi": "預測未來的最好方法就是去創造它。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Do not wait to strike till the iron is hot; but make it hot by striking.",
+    "author": "William Butler Yeats",
+    "chi": "不要等到鐵熱才揮擊，而應透過敲打把鐵燒熱。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Whether you think you can or you think you can’t, you’re right.",
+    "author": "Henry Ford",
+    "chi": "你認為你能或不能，你都對。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau",
+    "chi": "成功通常降臨在那些忙於行動而無暇尋找成功的人身上。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Don’t watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson",
+    "chi": "別盯著時鐘看；像時鐘一樣繼續運轉，持續前進。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "chi": "永遠面向陽光——陰影會落在你身後。",
+    "note": "dup1"
+  },
+  {
+    "quote": "You miss 100% of the shots you don’t take.",
+    "author": "Wayne Gretzky",
+    "chi": "你不出手的機會，錯過的百分之百。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "chi": "千里之行，始於足下。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Act as if what you do makes a difference. It does.",
+    "author": "William James",
+    "chi": "行動時要相信你的作為有意義，因為它確實如此。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Either you run the day, or the day runs you.",
+    "author": "Jim Rohn",
+    "chi": "要麼你掌控這一天，要麼這一天掌控你。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The future depends on what you do today.",
+    "author": "Mahatma Gandhi",
+    "chi": "未來取決於你今天所做的事。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Perseverance is not a long race; it is many short races one after another.",
+    "author": "Walter Elliot",
+    "chi": "毅力不是一場長跑，而是接連不斷的短跑。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Quality is not an act, it is a habit.",
+    "author": "Aristotle",
+    "chi": "品質不是一個行為，而是一種習慣。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain",
+    "chi": "要取得進展的秘訣就是開始行動。",
+    "note": "dup1"
+  },
+  {
+    "quote": "You have to be a little bit crazy to do great things.",
+    "author": "Unknown",
+    "chi": "要成就偉大事業，你得有點瘋狂。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt",
+    "chi": "相信自己能，你就已完成了一半。",
+    "note": "dup1"
+  },
+  {
+    "quote": "If opportunity doesn’t knock, build a door.",
+    "author": "Milton Berle",
+    "chi": "若機會不敲門，就自己造一扇門。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Don't be afraid to give up the good to go for the great.",
+    "author": "John D. Rockefeller",
+    "chi": "不要害怕放棄好的，去追求更好的。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The harder I work, the luckier I get.",
+    "author": "Samuel Goldwyn",
+    "chi": "我越努力，越幸運。",
+    "note": "dup1"
+  },
+  {
+    "quote": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "chi": "不怕走得慢，只怕停下來。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Motivation is what gets you started. Habit is what keeps you going.",
+    "author": "Jim Ryun",
+    "chi": "動機讓你開始，習慣讓你持續。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt",
+    "chi": "實現明天的唯一限制是我們今天的懷疑。",
+    "note": "dup1"
+  },
+  {
+    "quote": "If you can dream it, you can do it.",
+    "author": "Walt Disney",
+    "chi": "如果你能夢想它，你就能做到它。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Either write something worth reading or do something worth writing.",
+    "author": "Benjamin Franklin",
+    "chi": "要麼寫些值得閱讀的東西，要麼做些值得書寫的事。",
+    "note": "dup1"
+  },
+  {
+    "quote": "What we fear of doing most is usually what we most need to do.",
+    "author": "Ralph Waldo Emerson",
+    "chi": "我們最害怕做的事通常是最需要去做的事。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney",
+    "chi": "開始的方式是停止空談，開始行動。",
+    "note": "dup1"
+  },
+  {
+    "quote": "A goal without a plan is just a wish.",
+    "author": "Antoine de Saint-Exupéry",
+    "chi": "沒有計劃的目標只不過是一個願望。",
+    "note": "dup1"
+  },
+  {
+    "quote": "You don’t have to be great to start, but you have to start to be great.",
+    "author": "Zig Ziglar",
+    "chi": "開始時不必偉大，但要偉大就必須開始。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The most common way people give up their power is by thinking they don’t have any.",
+    "author": "Alice Walker",
+    "chi": "人們放棄自己力量的最常見方式就是認為自己沒有力量。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Start where you are. Use what you have. Do what you can.",
+    "author": "Arthur Ashe",
+    "chi": "從你所在之處開始，用你擁有的，做你能做的。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "chi": "成功非終點，失敗非致命；重要的是繼續前進的勇氣。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Don't wait. The time will never be just right.",
+    "author": "Napoleon Hill",
+    "chi": "不要等待，時機永遠不會剛好。",
+    "note": "dup1"
+  },
+  {
+    "quote": "If you want to lift yourself up, lift up someone else.",
+    "author": "Booker T. Washington",
+    "chi": "若想提升自己，就提升他人。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The best revenge is massive success.",
+    "author": "Frank Sinatra",
+    "chi": "最好的報復就是巨大的成功。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Small deeds done are better than great deeds planned.",
+    "author": "Peter Marshall",
+    "chi": "小事做到勝過宏大計劃未做。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Be not afraid of going slowly, be afraid only of standing still.",
+    "author": "Chinese Proverb",
+    "chi": "不要畏懼緩慢前行，只怕停滯不前。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Everything you’ve ever wanted is on the other side of fear.",
+    "author": "George Addair",
+    "chi": "你曾渴望的一切都在恐懼的另一側。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "author": "C.S. Lewis",
+    "chi": "艱難常使平凡人成就非凡的命運。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Your time is limited, don’t waste it living someone else’s life.",
+    "author": "Steve Jobs",
+    "chi": "你的時間有限，別浪費在活別人的人生上。",
+    "note": "dup1"
+  },
+  {
+    "quote": "Don’t wish it were easier. Wish you were better.",
+    "author": "Jim Rohn",
+    "chi": "別希望事情更簡單，應該希望自己更強大。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson",
+    "chi": "你註定要成為的人，是你自己決定成為的人。",
+    "note": "dup1"
+  },
+  {
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "chi": "熱愛你的工作，是做出偉大事業的唯一方式。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "chi": "人生就是當你忙着制定其他計劃時發生的事。",
+    "note": "dup2"
+  },
+  {
+    "quote": "The best way to predict the future is to invent it.",
+    "author": "Alan Kay",
+    "chi": "預測未來的最好方法就是去創造它。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Do not wait to strike till the iron is hot; but make it hot by striking.",
+    "author": "William Butler Yeats",
+    "chi": "不要等到鐵熱才揮擊，而應透過敲打把鐵燒熱。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Whether you think you can or you think you can’t, you’re right.",
+    "author": "Henry Ford",
+    "chi": "你認為你能或不能，你都對。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau",
+    "chi": "成功通常降臨在那些忙於行動而無暇尋找成功的人身上。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Don’t watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson",
+    "chi": "別盯著時鐘看；像時鐘一樣繼續運轉，持續前進。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "chi": "永遠面向陽光——陰影會落在你身後。",
+    "note": "dup2"
+  },
+  {
+    "quote": "You miss 100% of the shots you don’t take.",
+    "author": "Wayne Gretzky",
+    "chi": "你不出手的機會，錯過的百分之百。",
+    "note": "dup2"
+  },
+  {
+    "quote": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "chi": "千里之行，始於足下。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Act as if what you do makes a difference. It does.",
+    "author": "William James",
+    "chi": "行動時要相信你的作為有意義，因為它確實如此。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Either you run the day, or the day runs you.",
+    "author": "Jim Rohn",
+    "chi": "要麼你掌控這一天，要麼這一天掌控你。",
+    "note": "dup2"
+  },
+  {
+    "quote": "The future depends on what you do today.",
+    "author": "Mahatma Gandhi",
+    "chi": "未來取決於你今天所做的事。",
+    "note": "dup2"
+  },
+  {
+    "quote": "Perseverance is not a long race; it is many short races one after another.",
+    "author": "Walter Elliot",
+    "chi": "毅力不是一場長跑，而是接連不斷的短跑。",
+    "note": "dup2"
+  }
+]

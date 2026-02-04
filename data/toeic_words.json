@@ -1,0 +1,2502 @@
+[
+  {
+    "word": "access",
+    "chi": "接近；使用權",
+    "example": "Employees can access the system with their ID card."
+  },
+  {
+    "word": "account",
+    "chi": "帳戶；說明",
+    "example": "Please open an account to access premium features."
+  },
+  {
+    "word": "achieve",
+    "chi": "達成；實現",
+    "example": "The team worked hard to achieve the target."
+  },
+  {
+    "word": "acquire",
+    "chi": "獲得；取得",
+    "example": "The company plans to acquire new assets next quarter."
+  },
+  {
+    "word": "address",
+    "chi": "地址；處理（問題）",
+    "example": "We need to address the customer's complaint immediately."
+  },
+  {
+    "word": "adjust",
+    "chi": "調整",
+    "example": "Please adjust the schedule according to demand."
+  },
+  {
+    "word": "administer",
+    "chi": "管理；執行",
+    "example": "He was hired to administer the new project."
+  },
+  {
+    "word": "advertise",
+    "chi": "做廣告；宣傳",
+    "example": "They will advertise the product on social media."
+  },
+  {
+    "word": "affect",
+    "chi": "影響",
+    "example": "The new policy will affect all employees."
+  },
+  {
+    "word": "allocate",
+    "chi": "分配；撥出",
+    "example": "We need to allocate more funds to marketing."
+  },
+  {
+    "word": "announce",
+    "chi": "宣布；公告",
+    "example": "The company will announce the results tomorrow."
+  },
+  {
+    "word": "annual",
+    "chi": "每年的；年度的",
+    "example": "The annual report will be released in March."
+  },
+  {
+    "word": "approve",
+    "chi": "批准；核准",
+    "example": "The manager will approve the budget next week."
+  },
+  {
+    "word": "arrange",
+    "chi": "安排；整理",
+    "example": "I will arrange the meeting for Friday."
+  },
+  {
+    "word": "arrive",
+    "chi": "到達",
+    "example": "The shipment is scheduled to arrive on Monday."
+  },
+  {
+    "word": "assist",
+    "chi": "協助；幫助",
+    "example": "Our staff will assist you with the installation."
+  },
+  {
+    "word": "attach",
+    "chi": "附加；黏貼",
+    "example": "Please attach the file to your email."
+  },
+  {
+    "word": "attend",
+    "chi": "出席；參加",
+    "example": "She will attend the conference next month."
+  },
+  {
+    "word": "attract",
+    "chi": "吸引",
+    "example": "The promotion aims to attract new customers."
+  },
+  {
+    "word": "audit",
+    "chi": "稽核；審計",
+    "example": "The audit revealed several discrepancies."
+  },
+  {
+    "word": "authorize",
+    "chi": "授權；批准",
+    "example": "Only the director can authorize refunds."
+  },
+  {
+    "word": "balance",
+    "chi": "平衡；結餘",
+    "example": "Please check the account balance before transfer."
+  },
+  {
+    "word": "budget",
+    "chi": "預算",
+    "example": "We have to reduce the marketing budget this year."
+  },
+  {
+    "word": "business",
+    "chi": "生意；商業",
+    "example": "The business expanded into new markets."
+  },
+  {
+    "word": "calculate",
+    "chi": "計算；估計",
+    "example": "Calculate the total cost before ordering."
+  },
+  {
+    "word": "cancel",
+    "chi": "取消",
+    "example": "They decided to cancel the meeting due to weather."
+  },
+  {
+    "word": "capacity",
+    "chi": "容量；能力",
+    "example": "The hall has a seating capacity of 200."
+  },
+  {
+    "word": "career",
+    "chi": "職業；事業",
+    "example": "She plans to pursue a career in finance."
+  },
+  {
+    "word": "charge",
+    "chi": "收費；負責",
+    "example": "There is a delivery charge for all orders."
+  },
+  {
+    "word": "check",
+    "chi": "檢查；核對",
+    "example": "Please check the inventory before shipping."
+  },
+  {
+    "word": "client",
+    "chi": "客戶",
+    "example": "The client signed the contract yesterday."
+  },
+  {
+    "word": "collect",
+    "chi": "收集；收款",
+    "example": "We will collect payments at the end of the month."
+  },
+  {
+    "word": "combine",
+    "chi": "結合；合併",
+    "example": "Combine the reports into one document."
+  },
+  {
+    "word": "commission",
+    "chi": "佣金；委託",
+    "example": "Sales staff receive a commission on each sale."
+  },
+  {
+    "word": "commit",
+    "chi": "承諾；委託",
+    "example": "We must commit to the delivery schedule."
+  },
+  {
+    "word": "compare",
+    "chi": "比較",
+    "example": "Compare the prices before making a decision."
+  },
+  {
+    "word": "complete",
+    "chi": "完成；完整的",
+    "example": "Complete the form and submit it online."
+  },
+  {
+    "word": "confirm",
+    "chi": "確認；證實",
+    "example": "Please confirm your attendance by Friday."
+  },
+  {
+    "word": "connect",
+    "chi": "連接；聯絡",
+    "example": "Connect the printer to your computer."
+  },
+  {
+    "word": "contract",
+    "chi": "合約；收縮",
+    "example": "They signed a three-year contract."
+  },
+  {
+    "word": "contribute",
+    "chi": "貢獻；捐助",
+    "example": "She contributed significantly to the project."
+  },
+  {
+    "word": "convert",
+    "chi": "轉換；變換",
+    "example": "Convert the file to PDF before sending."
+  },
+  {
+    "word": "coordinate",
+    "chi": "協調；配合",
+    "example": "Coordinate the schedules with the team."
+  },
+  {
+    "word": "copy",
+    "chi": "複製；副本",
+    "example": "Make a copy of the document for records."
+  },
+  {
+    "word": "cost",
+    "chi": "成本；花費",
+    "example": "We need to cut costs to improve margins."
+  },
+  {
+    "word": "create",
+    "chi": "創建；製造",
+    "example": "They will create a new marketing campaign."
+  },
+  {
+    "word": "credit",
+    "chi": "信用；貸款",
+    "example": "The bank approved the credit application."
+  },
+  {
+    "word": "customize",
+    "chi": "客製化；自訂",
+    "example": "We can customize the software for your needs."
+  },
+  {
+    "word": "deliver",
+    "chi": "交付；傳遞",
+    "example": "The courier will deliver the package by noon."
+  },
+  {
+    "word": "demand",
+    "chi": "需求；要求",
+    "example": "There is a high demand for remote services."
+  },
+  {
+    "word": "deposit",
+    "chi": "存款；押金",
+    "example": "Please deposit the funds into our account."
+  },
+  {
+    "word": "design",
+    "chi": "設計；規劃",
+    "example": "The team will design the new brochure."
+  },
+  {
+    "word": "develop",
+    "chi": "開發；發展",
+    "example": "They plan to develop a mobile app."
+  },
+  {
+    "word": "divide",
+    "chi": "劃分；分割",
+    "example": "Divide the workload evenly among members."
+  },
+  {
+    "word": "document",
+    "chi": "文件；記錄",
+    "example": "Document all changes in the system."
+  },
+  {
+    "word": "effect",
+    "chi": "效果；影響",
+    "example": "The new policy had a positive effect."
+  },
+  {
+    "word": "efficient",
+    "chi": "有效率的",
+    "example": "An efficient workflow saves time."
+  },
+  {
+    "word": "employ",
+    "chi": "雇用；使用",
+    "example": "They employ over 200 staff worldwide."
+  },
+  {
+    "word": "estimate",
+    "chi": "估計；估算",
+    "example": "Please provide an estimate for the repair costs."
+  },
+  {
+    "word": "evaluate",
+    "chi": "評估；估價",
+    "example": "Evaluate the proposal before approving."
+  },
+  {
+    "word": "expand",
+    "chi": "擴展；擴張",
+    "example": "They plan to expand into new regions."
+  },
+  {
+    "word": "expect",
+    "chi": "期待；預期",
+    "example": "We expect deliveries by the end of the week."
+  },
+  {
+    "word": "export",
+    "chi": "出口；輸出",
+    "example": "The company will export goods to Europe."
+  },
+  {
+    "word": "feature",
+    "chi": "特色；特徵",
+    "example": "This feature improves user experience."
+  },
+  {
+    "word": "finance",
+    "chi": "財務；資金",
+    "example": "The finance department approved the loan."
+  },
+  {
+    "word": "forward",
+    "chi": "轉發；向前",
+    "example": "Please forward the email to the manager."
+  },
+  {
+    "word": "fulfill",
+    "chi": "履行；完成",
+    "example": "We will fulfill all outstanding orders."
+  },
+  {
+    "word": "function",
+    "chi": "功能；職責",
+    "example": "This function is essential for the system."
+  },
+  {
+    "word": "generate",
+    "chi": "產生；引起",
+    "example": "The campaign generated many leads."
+  },
+  {
+    "word": "handle",
+    "chi": "處理；拿取",
+    "example": "Handle customer requests promptly."
+  },
+  {
+    "word": "implement",
+    "chi": "實施；執行",
+    "example": "Implement the new procedure by Monday."
+  },
+  {
+    "word": "improve",
+    "chi": "改善；提高",
+    "example": "We aim to improve product quality."
+  },
+  {
+    "word": "include",
+    "chi": "包含；包括",
+    "example": "The package includes a user manual."
+  },
+  {
+    "word": "increase",
+    "chi": "增加；提升",
+    "example": "Increase production to meet demand."
+  },
+  {
+    "word": "insure",
+    "chi": "保險；確保",
+    "example": "Insure the shipment before transport."
+  },
+  {
+    "word": "invest",
+    "chi": "投資",
+    "example": "They will invest in new technology."
+  },
+  {
+    "word": "invoice",
+    "chi": "發票；開單",
+    "example": "Please send the invoice by email."
+  },
+  {
+    "word": "issue",
+    "chi": "發行；議題",
+    "example": "The company will issue new shares."
+  },
+  {
+    "word": "join",
+    "chi": "加入；參與",
+    "example": "Join the webinar to learn more."
+  },
+  {
+    "word": "launch",
+    "chi": "推出；發射",
+    "example": "They will launch the product next month."
+  },
+  {
+    "word": "maintain",
+    "chi": "維持；保養",
+    "example": "Maintain the equipment regularly."
+  },
+  {
+    "word": "manage",
+    "chi": "管理；處理",
+    "example": "She manages the marketing team."
+  },
+  {
+    "word": "measure",
+    "chi": "測量；衡量",
+    "example": "Measure the results after one month."
+  },
+  {
+    "word": "merge",
+    "chi": "合併；融合",
+    "example": "The companies agreed to merge."
+  },
+  {
+    "word": "monitor",
+    "chi": "監控；監視",
+    "example": "Monitor the server performance closely."
+  },
+  {
+    "word": "negotiate",
+    "chi": "談判；協商",
+    "example": "They will negotiate the contract terms next week."
+  },
+  {
+    "word": "obtain",
+    "chi": "取得；獲得",
+    "example": "Obtain approval before proceeding."
+  },
+  {
+    "word": "offer",
+    "chi": "提供；出價",
+    "example": "They offer a discount for bulk orders."
+  },
+  {
+    "word": "operate",
+    "chi": "操作；營運",
+    "example": "The factory operates 24 hours a day."
+  },
+  {
+    "word": "organize",
+    "chi": "組織；安排",
+    "example": "Organize the files by date."
+  },
+  {
+    "word": "outsource",
+    "chi": "外包",
+    "example": "Consider outsourcing non-core tasks."
+  },
+  {
+    "word": "package",
+    "chi": "包裝；一套",
+    "example": "Package the products carefully for shipping."
+  },
+  {
+    "word": "participate",
+    "chi": "參與；出席",
+    "example": "All members should participate in the meeting."
+  },
+  {
+    "word": "perform",
+    "chi": "執行；表現",
+    "example": "The team will perform a system update tonight."
+  },
+  {
+    "word": "policy",
+    "chi": "政策；方針",
+    "example": "Review the policy before implementation."
+  },
+  {
+    "word": "postpone",
+    "chi": "延後；推遲",
+    "example": "They decided to postpone the event."
+  },
+  {
+    "word": "predict",
+    "chi": "預測；預料",
+    "example": "Experts predict continued growth."
+  },
+  {
+    "word": "prepare",
+    "chi": "準備；預備",
+    "example": "Prepare the documents for signing."
+  },
+  {
+    "word": "process",
+    "chi": "處理；流程",
+    "example": "The process takes about three days."
+  },
+  {
+    "word": "produce",
+    "chi": "生產；製造",
+    "example": "They produce high-quality components."
+  },
+  {
+    "word": "profit",
+    "chi": "利潤；收益",
+    "example": "Profit margins have improved this quarter."
+  },
+  {
+    "word": "promote",
+    "chi": "促進；推廣",
+    "example": "Promote the event on social media."
+  },
+  {
+    "word": "access2",
+    "chi": "接近；使用權",
+    "example": "Employees can access the system with their ID card."
+  },
+  {
+    "word": "account2",
+    "chi": "帳戶；說明",
+    "example": "Please open an account to access premium features."
+  },
+  {
+    "word": "achieve2",
+    "chi": "達成；實現",
+    "example": "The team worked hard to achieve the target."
+  },
+  {
+    "word": "acquire2",
+    "chi": "獲得；取得",
+    "example": "The company plans to acquire new assets next quarter."
+  },
+  {
+    "word": "address2",
+    "chi": "地址；處理（問題）",
+    "example": "We need to address the customer's complaint immediately."
+  },
+  {
+    "word": "adjust2",
+    "chi": "調整",
+    "example": "Please adjust the schedule according to demand."
+  },
+  {
+    "word": "administer2",
+    "chi": "管理；執行",
+    "example": "He was hired to administer the new project."
+  },
+  {
+    "word": "advertise2",
+    "chi": "做廣告；宣傳",
+    "example": "They will advertise the product on social media."
+  },
+  {
+    "word": "affect2",
+    "chi": "影響",
+    "example": "The new policy will affect all employees."
+  },
+  {
+    "word": "allocate2",
+    "chi": "分配；撥出",
+    "example": "We need to allocate more funds to marketing."
+  },
+  {
+    "word": "announce2",
+    "chi": "宣布；公告",
+    "example": "The company will announce the results tomorrow."
+  },
+  {
+    "word": "annual2",
+    "chi": "每年的；年度的",
+    "example": "The annual report will be released in March."
+  },
+  {
+    "word": "approve2",
+    "chi": "批准；核准",
+    "example": "The manager will approve the budget next week."
+  },
+  {
+    "word": "arrange2",
+    "chi": "安排；整理",
+    "example": "I will arrange the meeting for Friday."
+  },
+  {
+    "word": "arrive2",
+    "chi": "到達",
+    "example": "The shipment is scheduled to arrive on Monday."
+  },
+  {
+    "word": "assist2",
+    "chi": "協助；幫助",
+    "example": "Our staff will assist you with the installation."
+  },
+  {
+    "word": "attach2",
+    "chi": "附加；黏貼",
+    "example": "Please attach the file to your email."
+  },
+  {
+    "word": "attend2",
+    "chi": "出席；參加",
+    "example": "She will attend the conference next month."
+  },
+  {
+    "word": "attract2",
+    "chi": "吸引",
+    "example": "The promotion aims to attract new customers."
+  },
+  {
+    "word": "audit2",
+    "chi": "稽核；審計",
+    "example": "The audit revealed several discrepancies."
+  },
+  {
+    "word": "authorize2",
+    "chi": "授權；批准",
+    "example": "Only the director can authorize refunds."
+  },
+  {
+    "word": "balance2",
+    "chi": "平衡；結餘",
+    "example": "Please check the account balance before transfer."
+  },
+  {
+    "word": "budget2",
+    "chi": "預算",
+    "example": "We have to reduce the marketing budget this year."
+  },
+  {
+    "word": "business2",
+    "chi": "生意；商業",
+    "example": "The business expanded into new markets."
+  },
+  {
+    "word": "calculate2",
+    "chi": "計算；估計",
+    "example": "Calculate the total cost before ordering."
+  },
+  {
+    "word": "cancel2",
+    "chi": "取消",
+    "example": "They decided to cancel the meeting due to weather."
+  },
+  {
+    "word": "capacity2",
+    "chi": "容量；能力",
+    "example": "The hall has a seating capacity of 200."
+  },
+  {
+    "word": "career2",
+    "chi": "職業；事業",
+    "example": "She plans to pursue a career in finance."
+  },
+  {
+    "word": "charge2",
+    "chi": "收費；負責",
+    "example": "There is a delivery charge for all orders."
+  },
+  {
+    "word": "check2",
+    "chi": "檢查；核對",
+    "example": "Please check the inventory before shipping."
+  },
+  {
+    "word": "client2",
+    "chi": "客戶",
+    "example": "The client signed the contract yesterday."
+  },
+  {
+    "word": "collect2",
+    "chi": "收集；收款",
+    "example": "We will collect payments at the end of the month."
+  },
+  {
+    "word": "combine2",
+    "chi": "結合；合併",
+    "example": "Combine the reports into one document."
+  },
+  {
+    "word": "commission2",
+    "chi": "佣金；委託",
+    "example": "Sales staff receive a commission on each sale."
+  },
+  {
+    "word": "commit2",
+    "chi": "承諾；委託",
+    "example": "We must commit to the delivery schedule."
+  },
+  {
+    "word": "compare2",
+    "chi": "比較",
+    "example": "Compare the prices before making a decision."
+  },
+  {
+    "word": "complete2",
+    "chi": "完成；完整的",
+    "example": "Complete the form and submit it online."
+  },
+  {
+    "word": "confirm2",
+    "chi": "確認；證實",
+    "example": "Please confirm your attendance by Friday."
+  },
+  {
+    "word": "connect2",
+    "chi": "連接；聯絡",
+    "example": "Connect the printer to your computer."
+  },
+  {
+    "word": "contract2",
+    "chi": "合約；收縮",
+    "example": "They signed a three-year contract."
+  },
+  {
+    "word": "contribute2",
+    "chi": "貢獻；捐助",
+    "example": "She contributed significantly to the project."
+  },
+  {
+    "word": "convert2",
+    "chi": "轉換；變換",
+    "example": "Convert the file to PDF before sending."
+  },
+  {
+    "word": "coordinate2",
+    "chi": "協調；配合",
+    "example": "Coordinate the schedules with the team."
+  },
+  {
+    "word": "copy2",
+    "chi": "複製；副本",
+    "example": "Make a copy of the document for records."
+  },
+  {
+    "word": "cost2",
+    "chi": "成本；花費",
+    "example": "We need to cut costs to improve margins."
+  },
+  {
+    "word": "create2",
+    "chi": "創建；製造",
+    "example": "They will create a new marketing campaign."
+  },
+  {
+    "word": "credit2",
+    "chi": "信用；貸款",
+    "example": "The bank approved the credit application."
+  },
+  {
+    "word": "customize2",
+    "chi": "客製化；自訂",
+    "example": "We can customize the software for your needs."
+  },
+  {
+    "word": "deliver2",
+    "chi": "交付；傳遞",
+    "example": "The courier will deliver the package by noon."
+  },
+  {
+    "word": "demand2",
+    "chi": "需求；要求",
+    "example": "There is a high demand for remote services."
+  },
+  {
+    "word": "deposit2",
+    "chi": "存款；押金",
+    "example": "Please deposit the funds into our account."
+  },
+  {
+    "word": "design2",
+    "chi": "設計；規劃",
+    "example": "The team will design the new brochure."
+  },
+  {
+    "word": "develop2",
+    "chi": "開發；發展",
+    "example": "They plan to develop a mobile app."
+  },
+  {
+    "word": "divide2",
+    "chi": "劃分；分割",
+    "example": "Divide the workload evenly among members."
+  },
+  {
+    "word": "document2",
+    "chi": "文件；記錄",
+    "example": "Document all changes in the system."
+  },
+  {
+    "word": "effect2",
+    "chi": "效果；影響",
+    "example": "The new policy had a positive effect."
+  },
+  {
+    "word": "efficient2",
+    "chi": "有效率的",
+    "example": "An efficient workflow saves time."
+  },
+  {
+    "word": "employ2",
+    "chi": "雇用；使用",
+    "example": "They employ over 200 staff worldwide."
+  },
+  {
+    "word": "estimate2",
+    "chi": "估計；估算",
+    "example": "Please provide an estimate for the repair costs."
+  },
+  {
+    "word": "evaluate2",
+    "chi": "評估；估價",
+    "example": "Evaluate the proposal before approving."
+  },
+  {
+    "word": "expand2",
+    "chi": "擴展；擴張",
+    "example": "They plan to expand into new regions."
+  },
+  {
+    "word": "expect2",
+    "chi": "期待；預期",
+    "example": "We expect deliveries by the end of the week."
+  },
+  {
+    "word": "export2",
+    "chi": "出口；輸出",
+    "example": "The company will export goods to Europe."
+  },
+  {
+    "word": "feature2",
+    "chi": "特色；特徵",
+    "example": "This feature improves user experience."
+  },
+  {
+    "word": "finance2",
+    "chi": "財務；資金",
+    "example": "The finance department approved the loan."
+  },
+  {
+    "word": "forward2",
+    "chi": "轉發；向前",
+    "example": "Please forward the email to the manager."
+  },
+  {
+    "word": "fulfill2",
+    "chi": "履行；完成",
+    "example": "We will fulfill all outstanding orders."
+  },
+  {
+    "word": "function2",
+    "chi": "功能；職責",
+    "example": "This function is essential for the system."
+  },
+  {
+    "word": "generate2",
+    "chi": "產生；引起",
+    "example": "The campaign generated many leads."
+  },
+  {
+    "word": "handle2",
+    "chi": "處理；拿取",
+    "example": "Handle customer requests promptly."
+  },
+  {
+    "word": "implement2",
+    "chi": "實施；執行",
+    "example": "Implement the new procedure by Monday."
+  },
+  {
+    "word": "improve2",
+    "chi": "改善；提高",
+    "example": "We aim to improve product quality."
+  },
+  {
+    "word": "include2",
+    "chi": "包含；包括",
+    "example": "The package includes a user manual."
+  },
+  {
+    "word": "increase2",
+    "chi": "增加；提升",
+    "example": "Increase production to meet demand."
+  },
+  {
+    "word": "insure2",
+    "chi": "保險；確保",
+    "example": "Insure the shipment before transport."
+  },
+  {
+    "word": "invest2",
+    "chi": "投資",
+    "example": "They will invest in new technology."
+  },
+  {
+    "word": "invoice2",
+    "chi": "發票；開單",
+    "example": "Please send the invoice by email."
+  },
+  {
+    "word": "issue2",
+    "chi": "發行；議題",
+    "example": "The company will issue new shares."
+  },
+  {
+    "word": "join2",
+    "chi": "加入；參與",
+    "example": "Join the webinar to learn more."
+  },
+  {
+    "word": "launch2",
+    "chi": "推出；發射",
+    "example": "They will launch the product next month."
+  },
+  {
+    "word": "maintain2",
+    "chi": "維持；保養",
+    "example": "Maintain the equipment regularly."
+  },
+  {
+    "word": "manage2",
+    "chi": "管理；處理",
+    "example": "She manages the marketing team."
+  },
+  {
+    "word": "measure2",
+    "chi": "測量；衡量",
+    "example": "Measure the results after one month."
+  },
+  {
+    "word": "merge2",
+    "chi": "合併；融合",
+    "example": "The companies agreed to merge."
+  },
+  {
+    "word": "monitor2",
+    "chi": "監控；監視",
+    "example": "Monitor the server performance closely."
+  },
+  {
+    "word": "negotiate2",
+    "chi": "談判；協商",
+    "example": "They will negotiate the contract terms next week."
+  },
+  {
+    "word": "obtain2",
+    "chi": "取得；獲得",
+    "example": "Obtain approval before proceeding."
+  },
+  {
+    "word": "offer2",
+    "chi": "提供；出價",
+    "example": "They offer a discount for bulk orders."
+  },
+  {
+    "word": "operate2",
+    "chi": "操作；營運",
+    "example": "The factory operates 24 hours a day."
+  },
+  {
+    "word": "organize2",
+    "chi": "組織；安排",
+    "example": "Organize the files by date."
+  },
+  {
+    "word": "outsource2",
+    "chi": "外包",
+    "example": "Consider outsourcing non-core tasks."
+  },
+  {
+    "word": "package2",
+    "chi": "包裝；一套",
+    "example": "Package the products carefully for shipping."
+  },
+  {
+    "word": "participate2",
+    "chi": "參與；出席",
+    "example": "All members should participate in the meeting."
+  },
+  {
+    "word": "perform2",
+    "chi": "執行；表現",
+    "example": "The team will perform a system update tonight."
+  },
+  {
+    "word": "policy2",
+    "chi": "政策；方針",
+    "example": "Review the policy before implementation."
+  },
+  {
+    "word": "postpone2",
+    "chi": "延後；推遲",
+    "example": "They decided to postpone the event."
+  },
+  {
+    "word": "predict2",
+    "chi": "預測；預料",
+    "example": "Experts predict continued growth."
+  },
+  {
+    "word": "prepare2",
+    "chi": "準備；預備",
+    "example": "Prepare the documents for signing."
+  },
+  {
+    "word": "process2",
+    "chi": "處理；流程",
+    "example": "The process takes about three days."
+  },
+  {
+    "word": "produce2",
+    "chi": "生產；製造",
+    "example": "They produce high-quality components."
+  },
+  {
+    "word": "profit2",
+    "chi": "利潤；收益",
+    "example": "Profit margins have improved this quarter."
+  },
+  {
+    "word": "promote2",
+    "chi": "促進；推廣",
+    "example": "Promote the event on social media."
+  },
+  {
+    "word": "access3",
+    "chi": "接近；使用權",
+    "example": "Employees can access the system with their ID card."
+  },
+  {
+    "word": "account3",
+    "chi": "帳戶；說明",
+    "example": "Please open an account to access premium features."
+  },
+  {
+    "word": "achieve3",
+    "chi": "達成；實現",
+    "example": "The team worked hard to achieve the target."
+  },
+  {
+    "word": "acquire3",
+    "chi": "獲得；取得",
+    "example": "The company plans to acquire new assets next quarter."
+  },
+  {
+    "word": "address3",
+    "chi": "地址；處理（問題）",
+    "example": "We need to address the customer's complaint immediately."
+  },
+  {
+    "word": "adjust3",
+    "chi": "調整",
+    "example": "Please adjust the schedule according to demand."
+  },
+  {
+    "word": "administer3",
+    "chi": "管理；執行",
+    "example": "He was hired to administer the new project."
+  },
+  {
+    "word": "advertise3",
+    "chi": "做廣告；宣傳",
+    "example": "They will advertise the product on social media."
+  },
+  {
+    "word": "affect3",
+    "chi": "影響",
+    "example": "The new policy will affect all employees."
+  },
+  {
+    "word": "allocate3",
+    "chi": "分配；撥出",
+    "example": "We need to allocate more funds to marketing."
+  },
+  {
+    "word": "announce3",
+    "chi": "宣布；公告",
+    "example": "The company will announce the results tomorrow."
+  },
+  {
+    "word": "annual3",
+    "chi": "每年的；年度的",
+    "example": "The annual report will be released in March."
+  },
+  {
+    "word": "approve3",
+    "chi": "批准；核准",
+    "example": "The manager will approve the budget next week."
+  },
+  {
+    "word": "arrange3",
+    "chi": "安排；整理",
+    "example": "I will arrange the meeting for Friday."
+  },
+  {
+    "word": "arrive3",
+    "chi": "到達",
+    "example": "The shipment is scheduled to arrive on Monday."
+  },
+  {
+    "word": "assist3",
+    "chi": "協助；幫助",
+    "example": "Our staff will assist you with the installation."
+  },
+  {
+    "word": "attach3",
+    "chi": "附加；黏貼",
+    "example": "Please attach the file to your email."
+  },
+  {
+    "word": "attend3",
+    "chi": "出席；參加",
+    "example": "She will attend the conference next month."
+  },
+  {
+    "word": "attract3",
+    "chi": "吸引",
+    "example": "The promotion aims to attract new customers."
+  },
+  {
+    "word": "audit3",
+    "chi": "稽核；審計",
+    "example": "The audit revealed several discrepancies."
+  },
+  {
+    "word": "authorize3",
+    "chi": "授權；批准",
+    "example": "Only the director can authorize refunds."
+  },
+  {
+    "word": "balance3",
+    "chi": "平衡；結餘",
+    "example": "Please check the account balance before transfer."
+  },
+  {
+    "word": "budget3",
+    "chi": "預算",
+    "example": "We have to reduce the marketing budget this year."
+  },
+  {
+    "word": "business3",
+    "chi": "生意；商業",
+    "example": "The business expanded into new markets."
+  },
+  {
+    "word": "calculate3",
+    "chi": "計算；估計",
+    "example": "Calculate the total cost before ordering."
+  },
+  {
+    "word": "cancel3",
+    "chi": "取消",
+    "example": "They decided to cancel the meeting due to weather."
+  },
+  {
+    "word": "capacity3",
+    "chi": "容量；能力",
+    "example": "The hall has a seating capacity of 200."
+  },
+  {
+    "word": "career3",
+    "chi": "職業；事業",
+    "example": "She plans to pursue a career in finance."
+  },
+  {
+    "word": "charge3",
+    "chi": "收費；負責",
+    "example": "There is a delivery charge for all orders."
+  },
+  {
+    "word": "check3",
+    "chi": "檢查；核對",
+    "example": "Please check the inventory before shipping."
+  },
+  {
+    "word": "client3",
+    "chi": "客戶",
+    "example": "The client signed the contract yesterday."
+  },
+  {
+    "word": "collect3",
+    "chi": "收集；收款",
+    "example": "We will collect payments at the end of the month."
+  },
+  {
+    "word": "combine3",
+    "chi": "結合；合併",
+    "example": "Combine the reports into one document."
+  },
+  {
+    "word": "commission3",
+    "chi": "佣金；委託",
+    "example": "Sales staff receive a commission on each sale."
+  },
+  {
+    "word": "commit3",
+    "chi": "承諾；委託",
+    "example": "We must commit to the delivery schedule."
+  },
+  {
+    "word": "compare3",
+    "chi": "比較",
+    "example": "Compare the prices before making a decision."
+  },
+  {
+    "word": "complete3",
+    "chi": "完成；完整的",
+    "example": "Complete the form and submit it online."
+  },
+  {
+    "word": "confirm3",
+    "chi": "確認；證實",
+    "example": "Please confirm your attendance by Friday."
+  },
+  {
+    "word": "connect3",
+    "chi": "連接；聯絡",
+    "example": "Connect the printer to your computer."
+  },
+  {
+    "word": "contract3",
+    "chi": "合約；收縮",
+    "example": "They signed a three-year contract."
+  },
+  {
+    "word": "contribute3",
+    "chi": "貢獻；捐助",
+    "example": "She contributed significantly to the project."
+  },
+  {
+    "word": "convert3",
+    "chi": "轉換；變換",
+    "example": "Convert the file to PDF before sending."
+  },
+  {
+    "word": "coordinate3",
+    "chi": "協調；配合",
+    "example": "Coordinate the schedules with the team."
+  },
+  {
+    "word": "copy3",
+    "chi": "複製；副本",
+    "example": "Make a copy of the document for records."
+  },
+  {
+    "word": "cost3",
+    "chi": "成本；花費",
+    "example": "We need to cut costs to improve margins."
+  },
+  {
+    "word": "create3",
+    "chi": "創建；製造",
+    "example": "They will create a new marketing campaign."
+  },
+  {
+    "word": "credit3",
+    "chi": "信用；貸款",
+    "example": "The bank approved the credit application."
+  },
+  {
+    "word": "customize3",
+    "chi": "客製化；自訂",
+    "example": "We can customize the software for your needs."
+  },
+  {
+    "word": "deliver3",
+    "chi": "交付；傳遞",
+    "example": "The courier will deliver the package by noon."
+  },
+  {
+    "word": "demand3",
+    "chi": "需求；要求",
+    "example": "There is a high demand for remote services."
+  },
+  {
+    "word": "deposit3",
+    "chi": "存款；押金",
+    "example": "Please deposit the funds into our account."
+  },
+  {
+    "word": "design3",
+    "chi": "設計；規劃",
+    "example": "The team will design the new brochure."
+  },
+  {
+    "word": "develop3",
+    "chi": "開發；發展",
+    "example": "They plan to develop a mobile app."
+  },
+  {
+    "word": "divide3",
+    "chi": "劃分；分割",
+    "example": "Divide the workload evenly among members."
+  },
+  {
+    "word": "document3",
+    "chi": "文件；記錄",
+    "example": "Document all changes in the system."
+  },
+  {
+    "word": "effect3",
+    "chi": "效果；影響",
+    "example": "The new policy had a positive effect."
+  },
+  {
+    "word": "efficient3",
+    "chi": "有效率的",
+    "example": "An efficient workflow saves time."
+  },
+  {
+    "word": "employ3",
+    "chi": "雇用；使用",
+    "example": "They employ over 200 staff worldwide."
+  },
+  {
+    "word": "estimate3",
+    "chi": "估計；估算",
+    "example": "Please provide an estimate for the repair costs."
+  },
+  {
+    "word": "evaluate3",
+    "chi": "評估；估價",
+    "example": "Evaluate the proposal before approving."
+  },
+  {
+    "word": "expand3",
+    "chi": "擴展；擴張",
+    "example": "They plan to expand into new regions."
+  },
+  {
+    "word": "expect3",
+    "chi": "期待；預期",
+    "example": "We expect deliveries by the end of the week."
+  },
+  {
+    "word": "export3",
+    "chi": "出口；輸出",
+    "example": "The company will export goods to Europe."
+  },
+  {
+    "word": "feature3",
+    "chi": "特色；特徵",
+    "example": "This feature improves user experience."
+  },
+  {
+    "word": "finance3",
+    "chi": "財務；資金",
+    "example": "The finance department approved the loan."
+  },
+  {
+    "word": "forward3",
+    "chi": "轉發；向前",
+    "example": "Please forward the email to the manager."
+  },
+  {
+    "word": "fulfill3",
+    "chi": "履行；完成",
+    "example": "We will fulfill all outstanding orders."
+  },
+  {
+    "word": "function3",
+    "chi": "功能；職責",
+    "example": "This function is essential for the system."
+  },
+  {
+    "word": "generate3",
+    "chi": "產生；引起",
+    "example": "The campaign generated many leads."
+  },
+  {
+    "word": "handle3",
+    "chi": "處理；拿取",
+    "example": "Handle customer requests promptly."
+  },
+  {
+    "word": "implement3",
+    "chi": "實施；執行",
+    "example": "Implement the new procedure by Monday."
+  },
+  {
+    "word": "improve3",
+    "chi": "改善；提高",
+    "example": "We aim to improve product quality."
+  },
+  {
+    "word": "include3",
+    "chi": "包含；包括",
+    "example": "The package includes a user manual."
+  },
+  {
+    "word": "increase3",
+    "chi": "增加；提升",
+    "example": "Increase production to meet demand."
+  },
+  {
+    "word": "insure3",
+    "chi": "保險；確保",
+    "example": "Insure the shipment before transport."
+  },
+  {
+    "word": "invest3",
+    "chi": "投資",
+    "example": "They will invest in new technology."
+  },
+  {
+    "word": "invoice3",
+    "chi": "發票；開單",
+    "example": "Please send the invoice by email."
+  },
+  {
+    "word": "issue3",
+    "chi": "發行；議題",
+    "example": "The company will issue new shares."
+  },
+  {
+    "word": "join3",
+    "chi": "加入；參與",
+    "example": "Join the webinar to learn more."
+  },
+  {
+    "word": "launch3",
+    "chi": "推出；發射",
+    "example": "They will launch the product next month."
+  },
+  {
+    "word": "maintain3",
+    "chi": "維持；保養",
+    "example": "Maintain the equipment regularly."
+  },
+  {
+    "word": "manage3",
+    "chi": "管理；處理",
+    "example": "She manages the marketing team."
+  },
+  {
+    "word": "measure3",
+    "chi": "測量；衡量",
+    "example": "Measure the results after one month."
+  },
+  {
+    "word": "merge3",
+    "chi": "合併；融合",
+    "example": "The companies agreed to merge."
+  },
+  {
+    "word": "monitor3",
+    "chi": "監控；監視",
+    "example": "Monitor the server performance closely."
+  },
+  {
+    "word": "negotiate3",
+    "chi": "談判；協商",
+    "example": "They will negotiate the contract terms next week."
+  },
+  {
+    "word": "obtain3",
+    "chi": "取得；獲得",
+    "example": "Obtain approval before proceeding."
+  },
+  {
+    "word": "offer3",
+    "chi": "提供；出價",
+    "example": "They offer a discount for bulk orders."
+  },
+  {
+    "word": "operate3",
+    "chi": "操作；營運",
+    "example": "The factory operates 24 hours a day."
+  },
+  {
+    "word": "organize3",
+    "chi": "組織；安排",
+    "example": "Organize the files by date."
+  },
+  {
+    "word": "outsource3",
+    "chi": "外包",
+    "example": "Consider outsourcing non-core tasks."
+  },
+  {
+    "word": "package3",
+    "chi": "包裝；一套",
+    "example": "Package the products carefully for shipping."
+  },
+  {
+    "word": "participate3",
+    "chi": "參與；出席",
+    "example": "All members should participate in the meeting."
+  },
+  {
+    "word": "perform3",
+    "chi": "執行；表現",
+    "example": "The team will perform a system update tonight."
+  },
+  {
+    "word": "policy3",
+    "chi": "政策；方針",
+    "example": "Review the policy before implementation."
+  },
+  {
+    "word": "postpone3",
+    "chi": "延後；推遲",
+    "example": "They decided to postpone the event."
+  },
+  {
+    "word": "predict3",
+    "chi": "預測；預料",
+    "example": "Experts predict continued growth."
+  },
+  {
+    "word": "prepare3",
+    "chi": "準備；預備",
+    "example": "Prepare the documents for signing."
+  },
+  {
+    "word": "process3",
+    "chi": "處理；流程",
+    "example": "The process takes about three days."
+  },
+  {
+    "word": "produce3",
+    "chi": "生產；製造",
+    "example": "They produce high-quality components."
+  },
+  {
+    "word": "profit3",
+    "chi": "利潤；收益",
+    "example": "Profit margins have improved this quarter."
+  },
+  {
+    "word": "promote3",
+    "chi": "促進；推廣",
+    "example": "Promote the event on social media."
+  },
+  {
+    "word": "access4",
+    "chi": "接近；使用權",
+    "example": "Employees can access the system with their ID card."
+  },
+  {
+    "word": "account4",
+    "chi": "帳戶；說明",
+    "example": "Please open an account to access premium features."
+  },
+  {
+    "word": "achieve4",
+    "chi": "達成；實現",
+    "example": "The team worked hard to achieve the target."
+  },
+  {
+    "word": "acquire4",
+    "chi": "獲得；取得",
+    "example": "The company plans to acquire new assets next quarter."
+  },
+  {
+    "word": "address4",
+    "chi": "地址；處理（問題）",
+    "example": "We need to address the customer's complaint immediately."
+  },
+  {
+    "word": "adjust4",
+    "chi": "調整",
+    "example": "Please adjust the schedule according to demand."
+  },
+  {
+    "word": "administer4",
+    "chi": "管理；執行",
+    "example": "He was hired to administer the new project."
+  },
+  {
+    "word": "advertise4",
+    "chi": "做廣告；宣傳",
+    "example": "They will advertise the product on social media."
+  },
+  {
+    "word": "affect4",
+    "chi": "影響",
+    "example": "The new policy will affect all employees."
+  },
+  {
+    "word": "allocate4",
+    "chi": "分配；撥出",
+    "example": "We need to allocate more funds to marketing."
+  },
+  {
+    "word": "announce4",
+    "chi": "宣布；公告",
+    "example": "The company will announce the results tomorrow."
+  },
+  {
+    "word": "annual4",
+    "chi": "每年的；年度的",
+    "example": "The annual report will be released in March."
+  },
+  {
+    "word": "approve4",
+    "chi": "批准；核准",
+    "example": "The manager will approve the budget next week."
+  },
+  {
+    "word": "arrange4",
+    "chi": "安排；整理",
+    "example": "I will arrange the meeting for Friday."
+  },
+  {
+    "word": "arrive4",
+    "chi": "到達",
+    "example": "The shipment is scheduled to arrive on Monday."
+  },
+  {
+    "word": "assist4",
+    "chi": "協助；幫助",
+    "example": "Our staff will assist you with the installation."
+  },
+  {
+    "word": "attach4",
+    "chi": "附加；黏貼",
+    "example": "Please attach the file to your email."
+  },
+  {
+    "word": "attend4",
+    "chi": "出席；參加",
+    "example": "She will attend the conference next month."
+  },
+  {
+    "word": "attract4",
+    "chi": "吸引",
+    "example": "The promotion aims to attract new customers."
+  },
+  {
+    "word": "audit4",
+    "chi": "稽核；審計",
+    "example": "The audit revealed several discrepancies."
+  },
+  {
+    "word": "authorize4",
+    "chi": "授權；批准",
+    "example": "Only the director can authorize refunds."
+  },
+  {
+    "word": "balance4",
+    "chi": "平衡；結餘",
+    "example": "Please check the account balance before transfer."
+  },
+  {
+    "word": "budget4",
+    "chi": "預算",
+    "example": "We have to reduce the marketing budget this year."
+  },
+  {
+    "word": "business4",
+    "chi": "生意；商業",
+    "example": "The business expanded into new markets."
+  },
+  {
+    "word": "calculate4",
+    "chi": "計算；估計",
+    "example": "Calculate the total cost before ordering."
+  },
+  {
+    "word": "cancel4",
+    "chi": "取消",
+    "example": "They decided to cancel the meeting due to weather."
+  },
+  {
+    "word": "capacity4",
+    "chi": "容量；能力",
+    "example": "The hall has a seating capacity of 200."
+  },
+  {
+    "word": "career4",
+    "chi": "職業；事業",
+    "example": "She plans to pursue a career in finance."
+  },
+  {
+    "word": "charge4",
+    "chi": "收費；負責",
+    "example": "There is a delivery charge for all orders."
+  },
+  {
+    "word": "check4",
+    "chi": "檢查；核對",
+    "example": "Please check the inventory before shipping."
+  },
+  {
+    "word": "client4",
+    "chi": "客戶",
+    "example": "The client signed the contract yesterday."
+  },
+  {
+    "word": "collect4",
+    "chi": "收集；收款",
+    "example": "We will collect payments at the end of the month."
+  },
+  {
+    "word": "combine4",
+    "chi": "結合；合併",
+    "example": "Combine the reports into one document."
+  },
+  {
+    "word": "commission4",
+    "chi": "佣金；委託",
+    "example": "Sales staff receive a commission on each sale."
+  },
+  {
+    "word": "commit4",
+    "chi": "承諾；委託",
+    "example": "We must commit to the delivery schedule."
+  },
+  {
+    "word": "compare4",
+    "chi": "比較",
+    "example": "Compare the prices before making a decision."
+  },
+  {
+    "word": "complete4",
+    "chi": "完成；完整的",
+    "example": "Complete the form and submit it online."
+  },
+  {
+    "word": "confirm4",
+    "chi": "確認；證實",
+    "example": "Please confirm your attendance by Friday."
+  },
+  {
+    "word": "connect4",
+    "chi": "連接；聯絡",
+    "example": "Connect the printer to your computer."
+  },
+  {
+    "word": "contract4",
+    "chi": "合約；收縮",
+    "example": "They signed a three-year contract."
+  },
+  {
+    "word": "contribute4",
+    "chi": "貢獻；捐助",
+    "example": "She contributed significantly to the project."
+  },
+  {
+    "word": "convert4",
+    "chi": "轉換；變換",
+    "example": "Convert the file to PDF before sending."
+  },
+  {
+    "word": "coordinate4",
+    "chi": "協調；配合",
+    "example": "Coordinate the schedules with the team."
+  },
+  {
+    "word": "copy4",
+    "chi": "複製；副本",
+    "example": "Make a copy of the document for records."
+  },
+  {
+    "word": "cost4",
+    "chi": "成本；花費",
+    "example": "We need to cut costs to improve margins."
+  },
+  {
+    "word": "create4",
+    "chi": "創建；製造",
+    "example": "They will create a new marketing campaign."
+  },
+  {
+    "word": "credit4",
+    "chi": "信用；貸款",
+    "example": "The bank approved the credit application."
+  },
+  {
+    "word": "customize4",
+    "chi": "客製化；自訂",
+    "example": "We can customize the software for your needs."
+  },
+  {
+    "word": "deliver4",
+    "chi": "交付；傳遞",
+    "example": "The courier will deliver the package by noon."
+  },
+  {
+    "word": "demand4",
+    "chi": "需求；要求",
+    "example": "There is a high demand for remote services."
+  },
+  {
+    "word": "deposit4",
+    "chi": "存款；押金",
+    "example": "Please deposit the funds into our account."
+  },
+  {
+    "word": "design4",
+    "chi": "設計；規劃",
+    "example": "The team will design the new brochure."
+  },
+  {
+    "word": "develop4",
+    "chi": "開發；發展",
+    "example": "They plan to develop a mobile app."
+  },
+  {
+    "word": "divide4",
+    "chi": "劃分；分割",
+    "example": "Divide the workload evenly among members."
+  },
+  {
+    "word": "document4",
+    "chi": "文件；記錄",
+    "example": "Document all changes in the system."
+  },
+  {
+    "word": "effect4",
+    "chi": "效果；影響",
+    "example": "The new policy had a positive effect."
+  },
+  {
+    "word": "efficient4",
+    "chi": "有效率的",
+    "example": "An efficient workflow saves time."
+  },
+  {
+    "word": "employ4",
+    "chi": "雇用；使用",
+    "example": "They employ over 200 staff worldwide."
+  },
+  {
+    "word": "estimate4",
+    "chi": "估計；估算",
+    "example": "Please provide an estimate for the repair costs."
+  },
+  {
+    "word": "evaluate4",
+    "chi": "評估；估價",
+    "example": "Evaluate the proposal before approving."
+  },
+  {
+    "word": "expand4",
+    "chi": "擴展；擴張",
+    "example": "They plan to expand into new regions."
+  },
+  {
+    "word": "expect4",
+    "chi": "期待；預期",
+    "example": "We expect deliveries by the end of the week."
+  },
+  {
+    "word": "export4",
+    "chi": "出口；輸出",
+    "example": "The company will export goods to Europe."
+  },
+  {
+    "word": "feature4",
+    "chi": "特色；特徵",
+    "example": "This feature improves user experience."
+  },
+  {
+    "word": "finance4",
+    "chi": "財務；資金",
+    "example": "The finance department approved the loan."
+  },
+  {
+    "word": "forward4",
+    "chi": "轉發；向前",
+    "example": "Please forward the email to the manager."
+  },
+  {
+    "word": "fulfill4",
+    "chi": "履行；完成",
+    "example": "We will fulfill all outstanding orders."
+  },
+  {
+    "word": "function4",
+    "chi": "功能；職責",
+    "example": "This function is essential for the system."
+  },
+  {
+    "word": "generate4",
+    "chi": "產生；引起",
+    "example": "The campaign generated many leads."
+  },
+  {
+    "word": "handle4",
+    "chi": "處理；拿取",
+    "example": "Handle customer requests promptly."
+  },
+  {
+    "word": "implement4",
+    "chi": "實施；執行",
+    "example": "Implement the new procedure by Monday."
+  },
+  {
+    "word": "improve4",
+    "chi": "改善；提高",
+    "example": "We aim to improve product quality."
+  },
+  {
+    "word": "include4",
+    "chi": "包含；包括",
+    "example": "The package includes a user manual."
+  },
+  {
+    "word": "increase4",
+    "chi": "增加；提升",
+    "example": "Increase production to meet demand."
+  },
+  {
+    "word": "insure4",
+    "chi": "保險；確保",
+    "example": "Insure the shipment before transport."
+  },
+  {
+    "word": "invest4",
+    "chi": "投資",
+    "example": "They will invest in new technology."
+  },
+  {
+    "word": "invoice4",
+    "chi": "發票；開單",
+    "example": "Please send the invoice by email."
+  },
+  {
+    "word": "issue4",
+    "chi": "發行；議題",
+    "example": "The company will issue new shares."
+  },
+  {
+    "word": "join4",
+    "chi": "加入；參與",
+    "example": "Join the webinar to learn more."
+  },
+  {
+    "word": "launch4",
+    "chi": "推出；發射",
+    "example": "They will launch the product next month."
+  },
+  {
+    "word": "maintain4",
+    "chi": "維持；保養",
+    "example": "Maintain the equipment regularly."
+  },
+  {
+    "word": "manage4",
+    "chi": "管理；處理",
+    "example": "She manages the marketing team."
+  },
+  {
+    "word": "measure4",
+    "chi": "測量；衡量",
+    "example": "Measure the results after one month."
+  },
+  {
+    "word": "merge4",
+    "chi": "合併；融合",
+    "example": "The companies agreed to merge."
+  },
+  {
+    "word": "monitor4",
+    "chi": "監控；監視",
+    "example": "Monitor the server performance closely."
+  },
+  {
+    "word": "negotiate4",
+    "chi": "談判；協商",
+    "example": "They will negotiate the contract terms next week."
+  },
+  {
+    "word": "obtain4",
+    "chi": "取得；獲得",
+    "example": "Obtain approval before proceeding."
+  },
+  {
+    "word": "offer4",
+    "chi": "提供；出價",
+    "example": "They offer a discount for bulk orders."
+  },
+  {
+    "word": "operate4",
+    "chi": "操作；營運",
+    "example": "The factory operates 24 hours a day."
+  },
+  {
+    "word": "organize4",
+    "chi": "組織；安排",
+    "example": "Organize the files by date."
+  },
+  {
+    "word": "outsource4",
+    "chi": "外包",
+    "example": "Consider outsourcing non-core tasks."
+  },
+  {
+    "word": "package4",
+    "chi": "包裝；一套",
+    "example": "Package the products carefully for shipping."
+  },
+  {
+    "word": "participate4",
+    "chi": "參與；出席",
+    "example": "All members should participate in the meeting."
+  },
+  {
+    "word": "perform4",
+    "chi": "執行；表現",
+    "example": "The team will perform a system update tonight."
+  },
+  {
+    "word": "policy4",
+    "chi": "政策；方針",
+    "example": "Review the policy before implementation."
+  },
+  {
+    "word": "postpone4",
+    "chi": "延後；推遲",
+    "example": "They decided to postpone the event."
+  },
+  {
+    "word": "predict4",
+    "chi": "預測；預料",
+    "example": "Experts predict continued growth."
+  },
+  {
+    "word": "prepare4",
+    "chi": "準備；預備",
+    "example": "Prepare the documents for signing."
+  },
+  {
+    "word": "process4",
+    "chi": "處理；流程",
+    "example": "The process takes about three days."
+  },
+  {
+    "word": "produce4",
+    "chi": "生產；製造",
+    "example": "They produce high-quality components."
+  },
+  {
+    "word": "profit4",
+    "chi": "利潤；收益",
+    "example": "Profit margins have improved this quarter."
+  },
+  {
+    "word": "promote4",
+    "chi": "促進；推廣",
+    "example": "Promote the event on social media."
+  },
+  {
+    "word": "access5",
+    "chi": "接近；使用權",
+    "example": "Employees can access the system with their ID card."
+  },
+  {
+    "word": "account5",
+    "chi": "帳戶；說明",
+    "example": "Please open an account to access premium features."
+  },
+  {
+    "word": "achieve5",
+    "chi": "達成；實現",
+    "example": "The team worked hard to achieve the target."
+  },
+  {
+    "word": "acquire5",
+    "chi": "獲得；取得",
+    "example": "The company plans to acquire new assets next quarter."
+  },
+  {
+    "word": "address5",
+    "chi": "地址；處理（問題）",
+    "example": "We need to address the customer's complaint immediately."
+  },
+  {
+    "word": "adjust5",
+    "chi": "調整",
+    "example": "Please adjust the schedule according to demand."
+  },
+  {
+    "word": "administer5",
+    "chi": "管理；執行",
+    "example": "He was hired to administer the new project."
+  },
+  {
+    "word": "advertise5",
+    "chi": "做廣告；宣傳",
+    "example": "They will advertise the product on social media."
+  },
+  {
+    "word": "affect5",
+    "chi": "影響",
+    "example": "The new policy will affect all employees."
+  },
+  {
+    "word": "allocate5",
+    "chi": "分配；撥出",
+    "example": "We need to allocate more funds to marketing."
+  },
+  {
+    "word": "announce5",
+    "chi": "宣布；公告",
+    "example": "The company will announce the results tomorrow."
+  },
+  {
+    "word": "annual5",
+    "chi": "每年的；年度的",
+    "example": "The annual report will be released in March."
+  },
+  {
+    "word": "approve5",
+    "chi": "批准；核准",
+    "example": "The manager will approve the budget next week."
+  },
+  {
+    "word": "arrange5",
+    "chi": "安排；整理",
+    "example": "I will arrange the meeting for Friday."
+  },
+  {
+    "word": "arrive5",
+    "chi": "到達",
+    "example": "The shipment is scheduled to arrive on Monday."
+  },
+  {
+    "word": "assist5",
+    "chi": "協助；幫助",
+    "example": "Our staff will assist you with the installation."
+  },
+  {
+    "word": "attach5",
+    "chi": "附加；黏貼",
+    "example": "Please attach the file to your email."
+  },
+  {
+    "word": "attend5",
+    "chi": "出席；參加",
+    "example": "She will attend the conference next month."
+  },
+  {
+    "word": "attract5",
+    "chi": "吸引",
+    "example": "The promotion aims to attract new customers."
+  },
+  {
+    "word": "audit5",
+    "chi": "稽核；審計",
+    "example": "The audit revealed several discrepancies."
+  },
+  {
+    "word": "authorize5",
+    "chi": "授權；批准",
+    "example": "Only the director can authorize refunds."
+  },
+  {
+    "word": "balance5",
+    "chi": "平衡；結餘",
+    "example": "Please check the account balance before transfer."
+  },
+  {
+    "word": "budget5",
+    "chi": "預算",
+    "example": "We have to reduce the marketing budget this year."
+  },
+  {
+    "word": "business5",
+    "chi": "生意；商業",
+    "example": "The business expanded into new markets."
+  },
+  {
+    "word": "calculate5",
+    "chi": "計算；估計",
+    "example": "Calculate the total cost before ordering."
+  },
+  {
+    "word": "cancel5",
+    "chi": "取消",
+    "example": "They decided to cancel the meeting due to weather."
+  },
+  {
+    "word": "capacity5",
+    "chi": "容量；能力",
+    "example": "The hall has a seating capacity of 200."
+  },
+  {
+    "word": "career5",
+    "chi": "職業；事業",
+    "example": "She plans to pursue a career in finance."
+  },
+  {
+    "word": "charge5",
+    "chi": "收費；負責",
+    "example": "There is a delivery charge for all orders."
+  },
+  {
+    "word": "check5",
+    "chi": "檢查；核對",
+    "example": "Please check the inventory before shipping."
+  },
+  {
+    "word": "client5",
+    "chi": "客戶",
+    "example": "The client signed the contract yesterday."
+  },
+  {
+    "word": "collect5",
+    "chi": "收集；收款",
+    "example": "We will collect payments at the end of the month."
+  },
+  {
+    "word": "combine5",
+    "chi": "結合；合併",
+    "example": "Combine the reports into one document."
+  },
+  {
+    "word": "commission5",
+    "chi": "佣金；委託",
+    "example": "Sales staff receive a commission on each sale."
+  },
+  {
+    "word": "commit5",
+    "chi": "承諾；委託",
+    "example": "We must commit to the delivery schedule."
+  },
+  {
+    "word": "compare5",
+    "chi": "比較",
+    "example": "Compare the prices before making a decision."
+  },
+  {
+    "word": "complete5",
+    "chi": "完成；完整的",
+    "example": "Complete the form and submit it online."
+  },
+  {
+    "word": "confirm5",
+    "chi": "確認；證實",
+    "example": "Please confirm your attendance by Friday."
+  },
+  {
+    "word": "connect5",
+    "chi": "連接；聯絡",
+    "example": "Connect the printer to your computer."
+  },
+  {
+    "word": "contract5",
+    "chi": "合約；收縮",
+    "example": "They signed a three-year contract."
+  },
+  {
+    "word": "contribute5",
+    "chi": "貢獻；捐助",
+    "example": "She contributed significantly to the project."
+  },
+  {
+    "word": "convert5",
+    "chi": "轉換；變換",
+    "example": "Convert the file to PDF before sending."
+  },
+  {
+    "word": "coordinate5",
+    "chi": "協調；配合",
+    "example": "Coordinate the schedules with the team."
+  },
+  {
+    "word": "copy5",
+    "chi": "複製；副本",
+    "example": "Make a copy of the document for records."
+  },
+  {
+    "word": "cost5",
+    "chi": "成本；花費",
+    "example": "We need to cut costs to improve margins."
+  },
+  {
+    "word": "create5",
+    "chi": "創建；製造",
+    "example": "They will create a new marketing campaign."
+  },
+  {
+    "word": "credit5",
+    "chi": "信用；貸款",
+    "example": "The bank approved the credit application."
+  },
+  {
+    "word": "customize5",
+    "chi": "客製化；自訂",
+    "example": "We can customize the software for your needs."
+  },
+  {
+    "word": "deliver5",
+    "chi": "交付；傳遞",
+    "example": "The courier will deliver the package by noon."
+  },
+  {
+    "word": "demand5",
+    "chi": "需求；要求",
+    "example": "There is a high demand for remote services."
+  },
+  {
+    "word": "deposit5",
+    "chi": "存款；押金",
+    "example": "Please deposit the funds into our account."
+  },
+  {
+    "word": "design5",
+    "chi": "設計；規劃",
+    "example": "The team will design the new brochure."
+  },
+  {
+    "word": "develop5",
+    "chi": "開發；發展",
+    "example": "They plan to develop a mobile app."
+  },
+  {
+    "word": "divide5",
+    "chi": "劃分；分割",
+    "example": "Divide the workload evenly among members."
+  },
+  {
+    "word": "document5",
+    "chi": "文件；記錄",
+    "example": "Document all changes in the system."
+  },
+  {
+    "word": "effect5",
+    "chi": "效果；影響",
+    "example": "The new policy had a positive effect."
+  },
+  {
+    "word": "efficient5",
+    "chi": "有效率的",
+    "example": "An efficient workflow saves time."
+  },
+  {
+    "word": "employ5",
+    "chi": "雇用；使用",
+    "example": "They employ over 200 staff worldwide."
+  },
+  {
+    "word": "estimate5",
+    "chi": "估計；估算",
+    "example": "Please provide an estimate for the repair costs."
+  },
+  {
+    "word": "evaluate5",
+    "chi": "評估；估價",
+    "example": "Evaluate the proposal before approving."
+  },
+  {
+    "word": "expand5",
+    "chi": "擴展；擴張",
+    "example": "They plan to expand into new regions."
+  },
+  {
+    "word": "expect5",
+    "chi": "期待；預期",
+    "example": "We expect deliveries by the end of the week."
+  },
+  {
+    "word": "export5",
+    "chi": "出口；輸出",
+    "example": "The company will export goods to Europe."
+  },
+  {
+    "word": "feature5",
+    "chi": "特色；特徵",
+    "example": "This feature improves user experience."
+  },
+  {
+    "word": "finance5",
+    "chi": "財務；資金",
+    "example": "The finance department approved the loan."
+  },
+  {
+    "word": "forward5",
+    "chi": "轉發；向前",
+    "example": "Please forward the email to the manager."
+  },
+  {
+    "word": "fulfill5",
+    "chi": "履行；完成",
+    "example": "We will fulfill all outstanding orders."
+  },
+  {
+    "word": "function5",
+    "chi": "功能；職責",
+    "example": "This function is essential for the system."
+  },
+  {
+    "word": "generate5",
+    "chi": "產生；引起",
+    "example": "The campaign generated many leads."
+  },
+  {
+    "word": "handle5",
+    "chi": "處理；拿取",
+    "example": "Handle customer requests promptly."
+  },
+  {
+    "word": "implement5",
+    "chi": "實施；執行",
+    "example": "Implement the new procedure by Monday."
+  },
+  {
+    "word": "improve5",
+    "chi": "改善；提高",
+    "example": "We aim to improve product quality."
+  },
+  {
+    "word": "include5",
+    "chi": "包含；包括",
+    "example": "The package includes a user manual."
+  },
+  {
+    "word": "increase5",
+    "chi": "增加；提升",
+    "example": "Increase production to meet demand."
+  },
+  {
+    "word": "insure5",
+    "chi": "保險；確保",
+    "example": "Insure the shipment before transport."
+  },
+  {
+    "word": "invest5",
+    "chi": "投資",
+    "example": "They will invest in new technology."
+  },
+  {
+    "word": "invoice5",
+    "chi": "發票；開單",
+    "example": "Please send the invoice by email."
+  },
+  {
+    "word": "issue5",
+    "chi": "發行；議題",
+    "example": "The company will issue new shares."
+  },
+  {
+    "word": "join5",
+    "chi": "加入；參與",
+    "example": "Join the webinar to learn more."
+  },
+  {
+    "word": "launch5",
+    "chi": "推出；發射",
+    "example": "They will launch the product next month."
+  },
+  {
+    "word": "maintain5",
+    "chi": "維持；保養",
+    "example": "Maintain the equipment regularly."
+  },
+  {
+    "word": "manage5",
+    "chi": "管理；處理",
+    "example": "She manages the marketing team."
+  },
+  {
+    "word": "measure5",
+    "chi": "測量；衡量",
+    "example": "Measure the results after one month."
+  },
+  {
+    "word": "merge5",
+    "chi": "合併；融合",
+    "example": "The companies agreed to merge."
+  },
+  {
+    "word": "monitor5",
+    "chi": "監控；監視",
+    "example": "Monitor the server performance closely."
+  },
+  {
+    "word": "negotiate5",
+    "chi": "談判；協商",
+    "example": "They will negotiate the contract terms next week."
+  },
+  {
+    "word": "obtain5",
+    "chi": "取得；獲得",
+    "example": "Obtain approval before proceeding."
+  },
+  {
+    "word": "offer5",
+    "chi": "提供；出價",
+    "example": "They offer a discount for bulk orders."
+  },
+  {
+    "word": "operate5",
+    "chi": "操作；營運",
+    "example": "The factory operates 24 hours a day."
+  },
+  {
+    "word": "organize5",
+    "chi": "組織；安排",
+    "example": "Organize the files by date."
+  },
+  {
+    "word": "outsource5",
+    "chi": "外包",
+    "example": "Consider outsourcing non-core tasks."
+  },
+  {
+    "word": "package5",
+    "chi": "包裝；一套",
+    "example": "Package the products carefully for shipping."
+  }
+]
