@@ -192,14 +192,15 @@ if weather_source == 'openweathermap':
 else:
     src_label = 'Open‑Meteo（主來源）'
 lines.append(f"<b>資料來源：</b> {src_label}")
+# 今日天氣概況（放在現在天氣之前）
+if precip_prob is not None:
+    lines.append(f"<b>今日天氣概況：</b> {weather_summary}（降雨機率最高 {precip_prob}%）")
+else:
+    lines.append(f"<b>今日天氣概況：</b> {weather_summary}")
 # if using backup source, add caution note
 if weather_source == 'openweathermap':
     lines.append('<b>備註：</b> 本次資料為備援來源（OpenWeatherMap），數值可能與主來源略有差異，請以當地實際狀況為準。')
 lines.append(f"<b>現在天氣：</b> 溫度 {now_temp}°C，風速 約{now_wind} km/h")
-if precip_prob is not None:
-    lines.append(f"<b>明天天氣概況：</b> {weather_summary}（降雨機率最高 {precip_prob}%）")
-else:
-    lines.append(f"<b>明天天氣概況：</b> {weather_summary}")
 lines.append(f"<b>明天天氣與穿衣建議：</b> 最高 {max_t}°C / 最低 {min_t}°C；建議：{clothing_advice(max_t, min_t, precip)}")
 # Replace lunar section with TOEIC vocabulary practice (daily 20 from data file)
 import json
@@ -259,15 +260,7 @@ def todays_quote(quotes_list):
 quote_today = todays_quote(quotes)
 
 
-lines.append(f"<b>多益常考單字（每日 20 組）</b>")
-for w in toeic:
-    import html
-    word = html.escape(w.get('word',''))
-    chi = html.escape(w.get('chi',''))
-    ex = html.escape(w.get('example',''))
-    lines.append(f"- {word}：{chi}；例句：{ex}")
-
-# replace horoscope with quote
+# replace horoscope with quote (move this before TOEIC list)
 if quote_today:
     import html
     q = html.escape(quote_today.get('quote',''))
@@ -278,6 +271,14 @@ if quote_today:
         lines.append(f"<b>（中文翻譯）</b> {chi}")
 else:
     lines.append(f"<b>今日名人語錄：</b> 暫無資料")
+
+lines.append(f"<b>多益常考單字（每日 20 組）</b>")
+for w in toeic:
+    import html
+    word = html.escape(w.get('word',''))
+    chi = html.escape(w.get('chi',''))
+    ex = html.escape(w.get('example',''))
+    lines.append(f"- {word}：{chi}；例句：{ex}")
 
 def format_news_section(title, items):
     s = [f"<b>{title}</b>"]
@@ -299,9 +300,6 @@ def format_news_section(title, items):
             text = html.escape(clean_title(raw))
             href = html.escape(link)
             s.append(f"{i}. <a href=\"{href}\">{text}</a>")
-        # concise summary (cleaned)
-        summary = ' / '.join([ (clean_title(it['title'])[:80] + '...') if len(clean_title(it['title']))>80 else clean_title(it['title']) for it in items ])
-        s.append(f"重點整理：{html.escape(summary)}")
     return '\n'.join(s)
 
 lines.append(format_news_section('太子集團新聞重點', news_taizi))
