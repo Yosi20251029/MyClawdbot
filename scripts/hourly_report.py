@@ -262,7 +262,10 @@ if quote_today:
     import html
     q = html.escape(quote_today.get('quote',''))
     a = html.escape(quote_today.get('author',''))
+    chi = html.escape(quote_today.get('chi',''))
     lines.append(f"<b>今日名人語錄：</b> {q} — {a}")
+    if chi:
+        lines.append(f"<b>（中文翻譯）</b> {chi}")
 else:
     lines.append(f"<b>今日名人語錄：</b> 暫無資料")
 
