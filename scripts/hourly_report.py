@@ -176,10 +176,11 @@ try:
 except Exception:
     weather_summary = '未知'
 
-# news
-news_taizi = fetch_news('太子集團')
-news_taiwan = fetch_news('台灣')
-news_world = fetch_news('international OR world news')
+# news (limit to 3 each) and add AI category
+news_taizi = fetch_news('太子集團', max_items=3)
+news_taiwan = fetch_news('台灣', max_items=3)
+news_world = fetch_news('international OR world news', max_items=3)
+news_ai = fetch_news('AI OR 人工智慧 OR artificial intelligence', max_items=3)
 
 # compose
 lines = []
@@ -200,66 +201,70 @@ if precip_prob is not None:
 else:
     lines.append(f"<b>明天天氣概況：</b> {weather_summary}")
 lines.append(f"<b>明天天氣與穿衣建議：</b> 最高 {max_t}°C / 最低 {min_t}°C；建議：{clothing_advice(max_t, min_t, precip)}")
-# Replace lunar section with TOEIC vocabulary practice
-def sample_toeic_words(n=5, history_k=10):
-    import random, json
-    words = [
-        {'word':'acquire','chi':'獲得；取得','example':'The company plans to acquire new assets next quarter.'},
-        {'word':'allocate','chi':'分配；撥出','example':'We need to allocate more funds to marketing.'},
-        {'word':'annual','chi':'每年的；年度的','example':'The annual report will be released in March.'},
-        {'word':'benefit','chi':'利益；好處','example':'Employees receive health benefits.'},
-        {'word':'comply','chi':'遵守','example':'All contractors must comply with the safety regulations.'},
-        {'word':'contribute','chi':'貢獻；捐助','example':'She contributed significantly to the project.'},
-        {'word':'deliver','chi':'交付；傳遞','example':'The courier will deliver the package by noon.'},
-        {'word':'efficient','chi':'有效率的','example':'An efficient workflow saves time.'},
-        {'word':'estimate','chi':'估計；估算','example':'Please provide an estimate for the repair costs.'},
-        {'word':'negotiate','chi':'談判；協商','example':'They will negotiate the contract terms next week.'},
-        {'word':'priority','chi':'優先事項；優先權','example':'Customer satisfaction is our top priority.'},
-        {'word':'proposal','chi':'提案；建議','example':'Submit your proposal by the end of the month.'},
-        {'word':'revenue','chi':'收入；營收','example':'The company reported increased revenue this quarter.'},
-        {'word':'schedule','chi':'時間表；安排','example':'The meeting is scheduled for Friday.'},
-        {'word':'strategic','chi':'策略性的','example':'They developed a strategic plan for expansion.'}
-    ]
-    history_path = os.path.join('memory','toeic_history.json')
-    recent = []
-    try:
-        if os.path.exists(history_path):
-            with open(history_path,'r',encoding='utf-8') as f:
-                recent = json.load(f)
-    except Exception:
-        recent = []
-    # build pool excluding recent words
-    recent_set = set(recent[-history_k:]) if recent else set()
-    pool = [w for w in words if w['word'] not in recent_set]
-    if len(pool) < n:
-        # not enough unique words, reset recent
-        pool = words.copy()
-        recent = []
-    chosen = random.sample(pool, min(n, len(pool)))
-    # update history
-    recent_words = [w['word'] for w in chosen]
-    recent.extend(recent_words)
-    # keep only last history_k entries
-    recent = recent[-history_k:]
-    try:
-        os.makedirs('memory', exist_ok=True)
-        with open(history_path,'w',encoding='utf-8') as f:
-            json.dump(recent, f, ensure_ascii=False)
-    except Exception:
-        pass
-    return chosen
+# Replace lunar section with TOEIC vocabulary practice (daily 20 from data file)
+import json
 
-toeic = sample_toeic_words(5)
+def load_toeic_words(path='data/toeic_words_sample.json'):
+    try:
+        with open(path,'r',encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return []
 
-lines.append(f"<b>多益常考單字（5）</b>")
+all_toeic = load_toeic_words()
+
+from math import floor
+
+def todays_toeic_batch(all_words, batch_size=20):
+    if not all_words:
+        return []
+    # days since epoch to determine rotation
+    days = (datetime.now().date() - datetime(1970,1,1).date()).days
+    start = (days * batch_size) % len(all_words)
+    batch = []
+    for i in range(batch_size):
+        idx = (start + i) % len(all_words)
+        batch.append(all_words[idx])
+    return batch
+
+toeic = todays_toeic_batch(all_toeic, batch_size=20)
+
+# quotes (daily one)
+def load_quotes(path='data/quotes_sample.json'):
+    try:
+        with open(path,'r',encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return []
+
+quotes = load_quotes()
+
+def todays_quote(quotes_list):
+    if not quotes_list:
+        return None
+    days = (datetime.now().date() - datetime(1970,1,1).date()).days
+    idx = days % len(quotes_list)
+    return quotes_list[idx]
+
+quote_today = todays_quote(quotes)
+
+
+lines.append(f"<b>多益常考單字（每日 20 組）</b>")
 for w in toeic:
     import html
-    word = html.escape(w['word'])
-    chi = html.escape(w['chi'])
-    ex = html.escape(w['example'])
+    word = html.escape(w.get('word',''))
+    chi = html.escape(w.get('chi',''))
+    ex = html.escape(w.get('example',''))
     lines.append(f"- {word}：{chi}；例句：{ex}")
 
-lines.append(f"<b>今日運勢：</b> 金牛：{horoscope_template('Taurus')}  巨蟹：{horoscope_template('Cancer')}")
+# replace horoscope with quote
+if quote_today:
+    import html
+    q = html.escape(quote_today.get('quote',''))
+    a = html.escape(quote_today.get('author',''))
+    lines.append(f"<b>今日名人語錄：</b> {q} — {a}")
+else:
+    lines.append(f"<b>今日名人語錄：</b> 暫無資料")
 
 def format_news_section(title, items):
     s = [f"<b>{title}</b>"]
