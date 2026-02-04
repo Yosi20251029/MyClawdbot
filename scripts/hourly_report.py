@@ -305,6 +305,7 @@ def format_news_section(title, items):
 lines.append(format_news_section('太子集團新聞重點', news_taizi))
 lines.append(format_news_section('台灣新聞重點', news_taiwan))
 lines.append(format_news_section('國際新聞重點', news_world))
+lines.append(format_news_section('AI科技新聞重點', news_ai))
 
 message = '\n\n'.join(lines)
 
@@ -317,7 +318,8 @@ def build_summary(data):
         'news_counts': {
             'taizi': len(news_taizi),
             'taiwan': len(news_taiwan),
-            'world': len(news_world)
+            'world': len(news_world),
+            'ai': len(news_ai)
         },
         'toeic': [ w['word'] for w in toeic ]
     }
