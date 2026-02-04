@@ -218,8 +218,13 @@ from math import floor
 def todays_toeic_batch(all_words, batch_size=20):
     if not all_words:
         return []
-    # days since epoch to determine rotation
-    days = (datetime.now().date() - datetime(1970,1,1).date()).days
+    # days since epoch to determine rotation (Asia/Taipei)
+    try:
+        from zoneinfo import ZoneInfo
+        today = datetime.now(ZoneInfo('Asia/Taipei')).date()
+    except Exception:
+        today = datetime.now().date()
+    days = (today - datetime(1970,1,1).date()).days
     start = (days * batch_size) % len(all_words)
     batch = []
     for i in range(batch_size):
@@ -242,7 +247,12 @@ quotes = load_quotes()
 def todays_quote(quotes_list):
     if not quotes_list:
         return None
-    days = (datetime.now().date() - datetime(1970,1,1).date()).days
+    try:
+        from zoneinfo import ZoneInfo
+        today = datetime.now(ZoneInfo('Asia/Taipei')).date()
+    except Exception:
+        today = datetime.now().date()
+    days = (today - datetime(1970,1,1).date()).days
     idx = days % len(quotes_list)
     return quotes_list[idx]
 
