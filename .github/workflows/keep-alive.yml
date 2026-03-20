@@ -1,0 +1,68 @@
+name: codespace-keep-alive
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # every 15 minutes
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+  codespaces: write
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Install gh CLI
+        run: |
+          sudo apt-get update && sudo apt-get install -y curl
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt-get update && sudo apt-get install -y gh
+
+      - name: Authenticate gh CLI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "$GITHUB_TOKEN" | gh auth login --with-token
+
+      - name: List codespaces for this repo
+        id: list
+        env:
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Listing codespaces for repo: $REPO"
+          gh api repos/$REPO/codespaces --jq '.codespaces[].name' || true
+
+      - name: Try to start codespaces (if any)
+        env:
+          REPO: ${{ github.repository }}
+        run: |
+          set -e
+          # Get list of codespace names (if any)
+          NAMES=$(gh api repos/$REPO/codespaces --jq '.codespaces[].name' || true)
+          if [ -z "$NAMES" ]; then
+            echo "No codespaces found for this repo."
+            exit 0
+          fi
+          echo "Found codespaces:"
+          echo "$NAMES"
+          # Attempt to start each codespace by name (best-effort)
+          for name in $NAMES; do
+            echo "Attempting to start codespace: $name"
+            # Best-effort POST to start endpoint (may be a no-op if already running)
+            gh api --method POST repos/$REPO/codespaces/$name/machine/start || echo "start request failed for $name"
+          done
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Keep-alive workflow failed. Creating an issue to ping the user."
+          gh issue create --title "[keep-alive] Codespace keep-alive failed" --body "The keep-alive workflow for $REPO failed at $(date -u). Please check Actions logs. This is an automated ping as requested." || true
